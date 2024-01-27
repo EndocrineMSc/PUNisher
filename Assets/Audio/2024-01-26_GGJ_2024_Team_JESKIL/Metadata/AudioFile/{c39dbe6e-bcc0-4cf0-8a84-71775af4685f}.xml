@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c39dbe6e-bcc0-4cf0-8a84-71775af4685f}">
+		<property name="assetPath">
+			<value>2023-10-26_IU_Game_Jam_Regensburg_Team_Enetrash_Main_Theme_v007.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>69.615499999999997</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c6ac99b2-85cb-4fd6-9128-9b944b80298e}</destination>
+		</relationship>
+	</object>
+</objects>
