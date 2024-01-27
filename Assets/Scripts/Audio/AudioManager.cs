@@ -28,12 +28,10 @@ public class AudioManager : MonoBehaviour
         else {
             Destroy(gameObject);
         }
-
-        
+      
         _masterBus = RuntimeManager.GetBus("bus:/");
         _musicBus = RuntimeManager.GetBus("bus:/Music");
-        _sfxBus = RuntimeManager.GetBus("bus:/SFX");
-        
+        _sfxBus = RuntimeManager.GetBus("bus:/SFX");    
     }
 
     public void SetVolume(VolumeType type, float value) {

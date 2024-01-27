@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InteractableObject : MonoBehaviour
+public class EagleEyeMarkerVisualizer : MonoBehaviour
 {
     #region Fields and Properties
 
