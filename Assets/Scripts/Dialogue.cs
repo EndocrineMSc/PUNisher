@@ -46,11 +46,18 @@ public class Dialogue : MonoBehaviour
     }
     private void Update()
     {
+        if (PunManager.Instance)
+        {
+            punsCollected = PunManager.Instance.PunsFound;
+
+        }
         //ShowDialogue(playerInRange);
     }
     private void Start()
     {
         ShowDialogue(true);
+        var punObjects = GameObject.FindGameObjectsWithTag("PunObject");
+        punsNeeded = punObjects.Length;
     }
 
     public void ShowDialogue(bool show) {
@@ -89,6 +96,7 @@ public class Dialogue : MonoBehaviour
 
                     defaultDialogue[currentLine-1].image.SetActive(false);
                     nextDialogue(0);
+                    return;
                 } 
                 else ShowDialogue(false);
 
