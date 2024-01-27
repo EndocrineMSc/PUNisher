@@ -1,3 +1,5 @@
+using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,6 +9,11 @@ public class PlayerMovement : MonoBehaviour
     NavMeshAgent _agent;
     SpriteRenderer _renderer;
     Animator _animator;
+
+    Vector3 _minScale;
+    Vector3 _maxScale;
+
+    float _cameraSize;
 
     #endregion
 
@@ -19,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
 
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _animator = GetComponentInChildren<Animator>();
+        
+        _minScale = LevelScaling.Instance.MinScale;
+        _maxScale = LevelScaling.Instance.MaxScale;
+
+        _cameraSize = Camera.main.orthographicSize;
     }
 
     void Update() {
@@ -31,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         ToggleWalkAnimation();
+        LerpScale();
     } 
 
     Vector3 GetMouseWorldPosition() {
@@ -39,6 +52,13 @@ public class PlayerMovement : MonoBehaviour
 
     void ToggleWalkAnimation() {
         _animator.SetBool("isWalking", _agent.velocity != Vector3.zero);
+    }
+
+    void LerpScale() {
+        var normalizedYPosition = (transform.position.y + _cameraSize) / (2 * _cameraSize);
+        var scale = Mathf.Lerp(_maxScale.x, _minScale.x, normalizedYPosition);
+        transform.localScale = new Vector3(scale, scale, 1);
+
     }
 
     #endregion
