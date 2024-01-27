@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PunObject
+  - Undefined
+  - Enemy
   layers:
   - Default
   - TransparentFX
