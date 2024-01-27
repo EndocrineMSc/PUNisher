@@ -1,8 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
-using System.Collections;
-using UnityEngine.SceneManagement;
 using System;
 
 /// <summary>
@@ -51,8 +48,6 @@ public class MainMenu : MonoBehaviour
         _startButton.GetComponent<Button>().onClick.AddListener(NewGame);
         _settingsButton.GetComponent<Button>().onClick.AddListener(OpenSettings);
         _creditsButton.GetComponent<Button>().onClick.AddListener(OpenCredits);
-
-        //AudioManager.Instance.PlayMenuMusic();
     }
 
     public static void RaiseMainMenuOpened()
@@ -94,9 +89,9 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
+        Debug.Log("Click");
         PlayButtonClick();
-        //AudioManager.Instance.StopMenuMusic();
-        //AudioManager.Instance.PlayLevelMusic();       
+        SceneLoader.Instance.LoadScene(SceneName.FirstDojo);
     }
 
     public void QuitGame()

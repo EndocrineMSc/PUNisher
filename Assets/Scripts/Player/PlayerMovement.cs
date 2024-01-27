@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     #region Fields and Properties
     NavMeshAgent _agent;
     SpriteRenderer _renderer;
+    Animator _animator;
 
     #endregion
 
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
         _agent.updateUpAxis = false;
 
         _renderer = GetComponentInChildren<SpriteRenderer>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     void Update() {
@@ -27,10 +29,16 @@ public class PlayerMovement : MonoBehaviour
             var xDistance = targetPosition.x - transform.position.x;
             _renderer.flipX = xDistance < 0;
         }
+
+        ToggleWalkAnimation();
     } 
 
     Vector3 GetMouseWorldPosition() {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    void ToggleWalkAnimation() {
+        _animator.SetBool("isWalking", _agent.velocity != Vector3.zero);
     }
 
     #endregion
