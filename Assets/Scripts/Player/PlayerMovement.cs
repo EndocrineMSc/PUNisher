@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
         _maxScale = LevelScaling.Instance.MaxScale;
 
         _cameraSize = Camera.main.orthographicSize;
-        Debug.Log(_cameraSize);
     }
 
     void Update() {
