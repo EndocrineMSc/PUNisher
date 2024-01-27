@@ -904,6 +904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PunCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 3667102419025468945, guid: 2aa668ffa4f28fc4b91afdeaba3a5207, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5105580563080629945, guid: 2aa668ffa4f28fc4b91afdeaba3a5207, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

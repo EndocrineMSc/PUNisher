@@ -45,7 +45,7 @@ public class SceneLoader : MonoBehaviour
     }
 
     private void FadeInScene(Scene scene, LoadSceneMode mode) {
-        //parameters not needed;
+        //parameters not needed
         _blackScreen.DOFade(0, _fadeDuration);
     }
 
