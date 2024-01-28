@@ -172,7 +172,9 @@ public class Dialogue : MonoBehaviour
             {
                 fightingDialogue[currentLine - 1].image.SetActive(false);
             }
-            currentImage.SetActive(true);
+
+            if (currentImage)
+                currentImage.SetActive(true);
 
             if (currentSentence.moodSprite != null) {
                 currentImage.GetComponent<Image>().sprite = currentSentence.moodSprite;
