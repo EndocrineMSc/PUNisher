@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 74.9, y: 10.889011}
+  m_AnchoredPosition: {x: 190, y: 10.889011}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &589487348703140226
@@ -164,12 +164,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8479828816166809701}
+  m_Father: {fileID: 3767675164868063944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -101.37503, y: 146.11499}
-  m_SizeDelta: {x: 170, y: 170}
+  m_AnchoredPosition: {x: -171.1052, y: -22.6973}
+  m_SizeDelta: {x: 342.2076, y: 554.6055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &892942601896910053
 CanvasRenderer:
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7af1f7f7b353cb546aff1a97a1aa182c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -292,8 +292,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 80442176689403123}
-  - {fileID: 1290120705180476097}
-  - {fileID: 6984485228557915809}
   m_Father: {fileID: 3767675164868063944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -322,14 +320,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.376, g: 0.376, b: 0.376, a: 0.62352943}
+  m_Color: {r: 0.5, g: 0.27542374, b: 0, a: 0.69803923}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 062e3080f37d38d4f96d71d14b9b127b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -545,7 +543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 325.257, y: -8.289}
+  m_AnchoredPosition: {x: 345, y: -8.289}
   m_SizeDelta: {x: 600.144, y: 94.086}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7822080441857514630
@@ -621,7 +619,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 4
+  m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
@@ -677,6 +675,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6984485228557915809}
+  - {fileID: 1290120705180476097}
   - {fileID: 8479828816166809701}
   m_Father: {fileID: 3476789250488595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -951,6 +951,7 @@ MonoBehaviour:
   punsNeeded: 3
   fighting: 0
   beaten: 0
+  nextScene: 3
   dialogueBox: {fileID: 7856377339385636980}
   nameTag: {fileID: 4835300200979773105}
   dialogueText: {fileID: 1038258515214740943}
@@ -958,24 +959,42 @@ MonoBehaviour:
   - name: Young Pundawan
     text: I will make you wag your tail!
     image: {fileID: 8545733822813823363}
-    moodSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    moodSprite: {fileID: 0}
   - name: Labrador
-    text: "My, my. How labra-dorable! \nLet's get to it then."
+    text: "How LABRa-dorable! \nLet's get to it then."
     image: {fileID: 2382334520007717300}
     moodSprite: {fileID: 0}
   fightingDialogue:
   - name: Labrador
     text: ...
     image: {fileID: 2382334520007717300}
-    moodSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    moodSprite: {fileID: 0}
   - name: Young Pundawan
-    text: I will PUNish you! PUNch PUNch!
+    text: Why did the dog cross the road? To get to the barking lot!
     image: {fileID: 8545733822813823363}
-    moodSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    moodSprite: {fileID: 0}
   - name: Labrador
-    text: Haha, you got me!
+    text: That one was RUFF.
     image: {fileID: 2382334520007717300}
-    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    moodSprite: {fileID: 0}
+  - name: Young Pundawan
+    text: What is a dog dentist's favorite tooth? The canine.
+    image: {fileID: 8545733822813823363}
+    moodSprite: {fileID: 0}
+  - name: Labrador
+    text: Chew, hehe.
+    image: {fileID: 2382334520007717300}
+    moodSprite: {fileID: 0}
+  - name: Young Pundawan
+    text: What do you call a large dog that meditates? Aware wolf.
+    image: {fileID: 8545733822813823363}
+    moodSprite: {fileID: 0}
+  - name: Labrador
+    text: '*howl* That one was nice!
+
+      Okay, go bark at the next tree!'
+    image: {fileID: 2382334520007717300}
+    moodSprite: {fileID: 0}
 --- !u!1 &8545733822813823363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,11 +1026,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8479828816166809701}
+  m_Father: {fileID: 3767675164868063944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 101.374985, y: 146.11499}
+  m_AnchoredPosition: {x: 114.999985, y: -65.88519}
   m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6759857281832549112

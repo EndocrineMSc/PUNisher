@@ -24,9 +24,11 @@ public class Dialogue : MonoBehaviour
 {
     [SerializeField] int punsNeeded;
     int punsCollected = 1;
+    bool playerInRange = false;
 
     public bool fighting = false;
     public bool beaten = false;
+    [SerializeField] SceneName nextScene;
 
     [Header("Dialogue")]
     [SerializeField] GameObject dialogueBox;
@@ -65,7 +67,8 @@ public class Dialogue : MonoBehaviour
 
     public void ShowDialogue(bool show) {
         dialogueBox.SetActive(show);
-        if(!beaten) nextDialogue(0);
+        if (!beaten) nextDialogue(0);
+        else SceneLoader.Instance.LoadScene(nextScene);
     }
 
     void nextDialogue(int current) {
@@ -74,7 +77,7 @@ public class Dialogue : MonoBehaviour
         nextDialogue();
     }
     public void nextDialogue() {
-        Debug.Log(currentLine +" start");
+
         if (!fighting)
         {
             if (currentLine <= defaultDialogue.Count-1)
@@ -108,7 +111,6 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            Debug.Log("fighting start " + currentLine);
             if (currentLine == 0)
             {
                 if (punsCollected < punsNeeded)
@@ -151,10 +153,8 @@ public class Dialogue : MonoBehaviour
             // increasing currentLine
             if (currentLine < fightingDialogue.Count) currentLine++;
 
-            Debug.Log("fighting end " + currentLine);
         }
 
-        Debug.Log(currentLine + " end");
 
     }
 }
