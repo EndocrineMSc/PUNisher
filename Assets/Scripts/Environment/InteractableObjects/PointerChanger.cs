@@ -24,5 +24,9 @@ public class PointerChanger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         Cursor.SetCursor(_cursorTextureCrosshairs, Vector2.zero, CursorMode.Auto);    
     }
 
+    private void OnDestroy() {
+        Cursor.SetCursor(_cursorTextureCrosshairs, Vector2.zero, CursorMode.Auto);   
+    }
+
     #endregion
 }
