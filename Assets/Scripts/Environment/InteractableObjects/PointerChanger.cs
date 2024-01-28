@@ -17,6 +17,10 @@ public class PointerChanger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerEnter(PointerEventData eventData)
     {
         Cursor.SetCursor(_cursorTextureMagnify, Vector2.zero, CursorMode.Auto);    
+    } 
+    public void OnPointerStay(PointerEventData eventData)
+    {
+        Cursor.SetCursor(_cursorTextureMagnify, Vector2.zero, CursorMode.Auto);    
     }
 
     public void OnPointerExit(PointerEventData eventData)

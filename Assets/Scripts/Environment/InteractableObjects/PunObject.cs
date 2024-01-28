@@ -33,10 +33,10 @@ public class PunObject : InteractableObject, IPointerClickHandler
         var distance = Vector2.Distance(playerPosition, _rectTransform.position);
 
         Debug.Log(distance);
-        if (distance < _activationDistance) {
+        //if (distance < _activationDistance) {
             PunManager.Instance.PunFound();
             Destroy(gameObject);
-        }
+        //}
     }
     #endregion
 }

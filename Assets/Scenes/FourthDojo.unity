@@ -219,11 +219,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1503163351414323219, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 61.3297
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 1503163351414323219, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 64.8452
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 1503163351414323219, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -373,7 +373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1503163351414323219, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -551.5221
+      value: -560.4
       objectReference: {fileID: 0}
     - target: {fileID: 1503163351414323219, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1029,7 +1029,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.41636515, y: -0.7381021}
+  m_Offset: {x: -0.14768815, y: -0.41616315}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1040,7 +1040,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.46034, y: 1.5677707}
+  m_Size: {x: 2.0149531, y: 0.92389286}
   m_EdgeRadius: 0
 --- !u!50 &553089897
 Rigidbody2D:
@@ -2045,11 +2045,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7149703283767717531, guid: 63e625df995f5c04c9f1d5a3b4dc63c9, type: 3}
       propertyPath: m_Radius
-      value: 0.6247809
+      value: 0.41649982
       objectReference: {fileID: 0}
     - target: {fileID: 7149703283767717531, guid: 63e625df995f5c04c9f1d5a3b4dc63c9, type: 3}
       propertyPath: m_Offset.y
-      value: 1.464781
+      value: 1.2565
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2230,7 +2230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1503163351414323219, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 77.634
+      value: 46.2
       objectReference: {fileID: 0}
     - target: {fileID: 1503163351414323219, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2290,7 +2290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2773754608886078963, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}
       propertyPath: _activationDistance
-      value: 110
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3570286166244697881, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}
       propertyPath: m_Name
