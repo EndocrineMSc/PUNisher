@@ -7,7 +7,8 @@ public class PointerChanger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
     #region Fields and Properties
 
-    [SerializeField] private Texture2D _cursorTexture;
+    [SerializeField] private Texture2D _cursorTextureCrosshairs;
+    [SerializeField] private Texture2D _cursorTextureMagnify;
 
     #endregion
 
@@ -15,12 +16,13 @@ public class PointerChanger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Cursor.SetCursor(_cursorTexture, Vector2.zero, CursorMode.Auto);    
+        Cursor.SetCursor(_cursorTextureMagnify, Vector2.zero, CursorMode.Auto);    
+        Debug.Log("Hover");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);    
+        Cursor.SetCursor(_cursorTextureCrosshairs, Vector2.zero, CursorMode.Auto);    
     }
 
     #endregion
