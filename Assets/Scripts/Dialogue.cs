@@ -69,6 +69,7 @@ public class Dialogue : MonoBehaviour
     public void ShowDialogue(bool show) {
         //if (show) PauseControl.PauseGame();
         //else PauseControl.ResumeGame();
+        PlayerStopHandler.dialogueEngaged = show;
 
         dialogueBox.SetActive(show);
         if (!beaten) nextDialogue(0);
