@@ -17,7 +17,6 @@ public class PointerChanger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerEnter(PointerEventData eventData)
     {
         Cursor.SetCursor(_cursorTextureMagnify, Vector2.zero, CursorMode.Auto);    
-        Debug.Log("Hover");
     }
 
     public void OnPointerExit(PointerEventData eventData)

@@ -8,12 +8,14 @@ public class PlayerMovement : MonoBehaviour
     #region Fields and Properties
     NavMeshAgent _agent;
     SpriteRenderer _renderer;
+    Transform _visuals;
     Animator _animator;
 
     Vector3 _minScale;
     Vector3 _maxScale;
 
-    float _cameraSize;
+    float _minTraversableY;
+    float _maxTraversableY;
 
     #endregion
 
@@ -24,13 +26,14 @@ public class PlayerMovement : MonoBehaviour
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
 
+        _visuals = transform.GetChild(0);
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _animator = GetComponentInChildren<Animator>();
         
         _minScale = LevelScaling.Instance.MinScale;
         _maxScale = LevelScaling.Instance.MaxScale;
-
-        _cameraSize = Camera.main.orthographicSize;
+        _minTraversableY = LevelScaling.Instance.MinTraversableY;
+        _maxTraversableY = LevelScaling.Instance.MaxTraversableY;
     }
 
     void Update() {
@@ -55,10 +58,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void LerpScale() {
-        var normalizedYPosition = (transform.position.y + _cameraSize) / (2 * _cameraSize);
+        var normalizedYPosition = (transform.position.y - _minTraversableY) / (_maxTraversableY - _minTraversableY);
         var scale = Mathf.Lerp(_maxScale.x, _minScale.x, normalizedYPosition);
-        transform.localScale = new Vector3(scale, scale, 1);
-
+        _visuals.localScale = new Vector3(scale, scale, 1);
     }
 
     #endregion

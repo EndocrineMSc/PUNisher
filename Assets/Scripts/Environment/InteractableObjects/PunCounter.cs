@@ -18,6 +18,11 @@ public class PunCounter : MonoBehaviour
 
     private void Start() {
         var punObjects = GameObject.FindGameObjectsWithTag("PunObject");
+
+        if (punObjects.Length <= 0) {
+            Destroy(gameObject);
+        }
+
         _maxPunCount = punObjects.Length;
     }
 
