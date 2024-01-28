@@ -65,5 +65,6 @@ public enum SceneName {
     FirstDojo,
     SecondDojo,
     ThirdDojo,
-    FourthDojo
+    FourthDojo,
+    EndScene
 }

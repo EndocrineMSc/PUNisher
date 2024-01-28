@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638419518650000000
+  lastModified: 638419732313840319
   FileSizes:
   - Name: Desktop
     Value: 1122
@@ -62,7 +62,7 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638419518650000000
+  lastModified: 638419732313820300
   FileSizes:
   - Name: Desktop
     Value: 1706
@@ -92,7 +92,7 @@ MonoBehaviour:
   - {fileID: -4764526131418357758}
   StringsBanks:
   - {fileID: -6706701397041019520}
-  cacheTime: 638419518670000000
+  cacheTime: 638419732313910404
   cacheVersion: 131616
 --- !u!114 &244477066174226654
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638419518670000000
+  lastModified: 638419732313910404
   FileSizes:
   - Name: Desktop
     Value: 160384
@@ -129,7 +129,7 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638419518670000000
+  lastModified: 638419732313890387
   FileSizes:
   - Name: Desktop
     Value: 825120

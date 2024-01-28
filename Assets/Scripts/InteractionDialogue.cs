@@ -4,23 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class Sentence
-{
-    public string name;
-    [TextArea(3, 5)]public string text;
-    public GameObject image;
-    public Sprite moodSprite;
 
-    public Sentence(string name, string text, GameObject image, Sprite mood)
-    {
-        this.name = name;
-        this.text = text;
-        this.image = image;
-        this.moodSprite = mood;
-    }
-}
-public class Dialogue : MonoBehaviour
+public class InteractionDialogue : MonoBehaviour
 {
     [SerializeField] int punsNeeded;
     int punsCollected = 1;
@@ -41,14 +26,14 @@ public class Dialogue : MonoBehaviour
 
    
   
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
-        playerInRange = true;
+        showDialogue = true;
     }
-    //private void OnTriggerExit2D(Collider2D other)
-    //{
-    //    playerInRange = false;
-    //}
+    private void OnTriggerExit(Collider other)
+    {
+        showDialogue = false;
+    }
     private void Update()
     {
         if (PunManager.Instance)
@@ -56,19 +41,16 @@ public class Dialogue : MonoBehaviour
             punsCollected = PunManager.Instance.PunsFound;
 
         }
-        //ShowDialogue(playerInRange);
+        ShowDialogue(playerInRange);
     }
     private void Start()
     {
-        ShowDialogue(true);
+        //ShowDialogue(true);
         var punObjects = GameObject.FindGameObjectsWithTag("PunObject");
         punsNeeded = punObjects.Length;
     }
 
     public void ShowDialogue(bool show) {
-        //if (show) PauseControl.PauseGame();
-        //else PauseControl.ResumeGame();
-
         dialogueBox.SetActive(show);
         if (!beaten) nextDialogue(0);
         else SceneLoader.Instance.LoadScene(nextScene);
