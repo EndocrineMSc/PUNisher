@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,6 +15,12 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private Image _blackScreen;
     [SerializeField] private float _fadeDuration = 2f;
     private bool _isFading = false;
+
+    [SerializeField] EventReference _menuMusic;
+    [SerializeField] EventReference _dojo1;
+    [SerializeField] EventReference _dojo2;
+    [SerializeField] EventReference _dojo3;
+    [SerializeField] EventReference _dojo4;
 
     #endregion
 
@@ -40,9 +47,28 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void LoadScene(SceneName sceneName) {
-        if (!_isFading)
+        if (!_isFading) {
+            AudioManager.Instance.CleanUp(true);
             StartCoroutine(FadeOutScene(sceneName));
-        Debug.Log("hey");
+
+            switch(sceneName) {
+                case SceneName.MainMenu:
+                    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                    break;
+                case SceneName.FirstDojo:
+                    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                    break;
+                case SceneName.SecondDojo:
+                    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                    break;
+                case SceneName.ThirdDojo:
+                    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                    break;
+                case SceneName.FourthDojo:
+                    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                    break;
+            }
+        }
     }
 
     private void FadeInScene(Scene scene, LoadSceneMode mode) {

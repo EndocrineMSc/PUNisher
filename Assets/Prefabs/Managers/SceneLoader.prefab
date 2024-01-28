@@ -148,7 +148,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _blackScreen: {fileID: 5996939509925347454}
-  _fadeDuration: 2
+  _fadeDuration: 5
+  _menuMusic:
+    Guid:
+      Data1: 77806571
+      Data2: 1285273340
+      Data3: -1697348198
+      Data4: -1750979991
+    Path: event:/MUSIC/Music_Menu_Music
+  _dojo1:
+    Guid:
+      Data1: 936801945
+      Data2: 1223846625
+      Data3: 1949862020
+      Data4: -2134781149
+    Path: event:/MUSIC/Music_Panda_Dojo
+  _dojo2:
+    Guid:
+      Data1: 2061362205
+      Data2: 1294690422
+      Data3: 965299092
+      Data4: -1844046520
+    Path: event:/MUSIC/Music_Gasse
+  _dojo3:
+    Guid:
+      Data1: -1051618200
+      Data2: 1266218184
+      Data3: 1984110728
+      Data4: -408020118
+    Path: event:/MUSIC/Music_Agua-Dojo
+  _dojo4:
+    Guid:
+      Data1: -71426447
+      Data2: 1086873749
+      Data3: 602957447
+      Data4: 832225886
+    Path: event:/MUSIC/Music_Endgegner-Dojo
 --- !u!1 &4692080553365603913
 GameObject:
   m_ObjectHideFlags: 0
