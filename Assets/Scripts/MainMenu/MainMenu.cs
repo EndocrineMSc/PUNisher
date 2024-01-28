@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using FMODUnity;
 
 /// <summary>
 /// Attach this script to a MainMenu Canvas with the buttons as children.
@@ -19,6 +20,8 @@ public class MainMenu : MonoBehaviour
     public static event Action OnMainMenuOpened;
     public static event Action OnSettingsMenuOpened;
     public static event Action OnCreditsMenuOpened;
+
+    [SerializeField] EventReference _menuMusic;
 
     #endregion
 
@@ -48,6 +51,9 @@ public class MainMenu : MonoBehaviour
         _startButton.GetComponent<Button>().onClick.AddListener(NewGame);
         _settingsButton.GetComponent<Button>().onClick.AddListener(OpenSettings);
         _creditsButton.GetComponent<Button>().onClick.AddListener(OpenCredits);
+
+        var eventInstance = AudioManager.Instance.CreateInstance(_menuMusic);
+        eventInstance.start();
     }
 
     public static void RaiseMainMenuOpened()
@@ -91,6 +97,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Click");
         PlayButtonClick();
+        AudioManager.Instance.CleanUp(true);
         SceneLoader.Instance.LoadScene(SceneName.FirstDojo);
     }
 

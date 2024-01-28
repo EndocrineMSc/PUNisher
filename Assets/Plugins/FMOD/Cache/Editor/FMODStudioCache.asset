@@ -27,6 +27,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8734552159900263119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/Music_Gasse
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/Music_Gasse
+  Guid:
+    Data1: 2061362205
+    Data2: 1294690422
+    Data3: 965299092
+    Data4: -1844046520
+  Banks:
+  - {fileID: 2453025356702693663}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 50181
+--- !u!114 &-7557535530440209313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/Music_Endgegner-Dojo
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/Music_Endgegner-Dojo
+  Guid:
+    Data1: -71426447
+    Data2: 1086873749
+    Data3: 602957447
+    Data4: 832225886
+  Banks:
+  - {fileID: 2453025356702693663}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 59200
 --- !u!114 &-6965068877321084959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +123,10 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638420603031148514
+  lastModified: 638420632610000000
   FileSizes:
   - Name: Desktop
-    Value: 1806
+    Value: 1980
   Exists: 1
 --- !u!114 &-6419528380774417007
 MonoBehaviour:
@@ -170,7 +224,7 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638420603030503629
+  lastModified: 638420632610000000
   FileSizes:
   - Name: Desktop
     Value: 1706
@@ -347,12 +401,16 @@ MonoBehaviour:
   - {fileID: -1807557995058848817}
   - {fileID: 3910893733900870774}
   - {fileID: -6419528380774417007}
+  - {fileID: -8734552159900263119}
+  - {fileID: 4535945235902553035}
+  - {fileID: -7557535530440209313}
+  - {fileID: 8866598372831854586}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4764526131418357758}
   StringsBanks:
   - {fileID: -6706701397041019520}
-  cacheTime: 638420603031568891
+  cacheTime: 638420632630000000
   cacheVersion: 131616
 --- !u!114 &138615104816179363
 MonoBehaviour:
@@ -396,7 +454,7 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638420603030888273
+  lastModified: 638420632630000000
   FileSizes:
   - Name: Desktop
     Value: 487360
@@ -443,10 +501,10 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638420603031568891
+  lastModified: 638420632630000000
   FileSizes:
   - Name: Desktop
-    Value: 1454304
+    Value: 2231968
   Exists: 1
 --- !u!114 &2887099497487461074
 MonoBehaviour:
@@ -502,6 +560,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4535945235902553035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/Music_Agua-Dojo
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/Music_Agua-Dojo
+  Guid:
+    Data1: -1051618200
+    Data2: 1266218184
+    Data3: 1984110728
+    Data4: -408020118
+  Banks:
+  - {fileID: 2453025356702693663}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 50181
 --- !u!114 &6421350425749917749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,3 +722,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8866598372831854586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/Music_Panda_Dojo
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/Music_Panda_Dojo
+  Guid:
+    Data1: 936801945
+    Data2: 1223846625
+    Data3: 1949862020
+    Data4: -2134781149
+  Banks:
+  - {fileID: 2453025356702693663}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 50181

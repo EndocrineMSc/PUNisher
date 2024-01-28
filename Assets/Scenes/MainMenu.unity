@@ -497,7 +497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4985731635510203046, guid: 5533597bd0e11a64b88b8effea46ccc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1578,6 +1578,26 @@ PrefabInstance:
     - target: {fileID: 6263577387203307685, guid: 4af3df746ad8dc949b20ae416c13daed, type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534782438387320887, guid: 4af3df746ad8dc949b20ae416c13daed, type: 3}
+      propertyPath: _menuMusic.Path
+      value: event:/MUSIC/Music_Menu_Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534782438387320887, guid: 4af3df746ad8dc949b20ae416c13daed, type: 3}
+      propertyPath: _menuMusic.Guid.Data1
+      value: 77806571
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534782438387320887, guid: 4af3df746ad8dc949b20ae416c13daed, type: 3}
+      propertyPath: _menuMusic.Guid.Data2
+      value: 1285273340
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534782438387320887, guid: 4af3df746ad8dc949b20ae416c13daed, type: 3}
+      propertyPath: _menuMusic.Guid.Data3
+      value: -1697348198
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534782438387320887, guid: 4af3df746ad8dc949b20ae416c13daed, type: 3}
+      propertyPath: _menuMusic.Guid.Data4
+      value: -1750979991
       objectReference: {fileID: 0}
     - target: {fileID: 6976447772093529269, guid: 4af3df746ad8dc949b20ae416c13daed, type: 3}
       propertyPath: m_Pivot.x
