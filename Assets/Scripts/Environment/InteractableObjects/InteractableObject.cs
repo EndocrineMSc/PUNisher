@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -5,6 +6,8 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(PointerChanger))]
 public class InteractableObject : MonoBehaviour, IPointerClickHandler
 {
+    [SerializeField] EventReference _clickSound;
+
     public virtual void OnPointerClick(PointerEventData eventData)
     {
         PlaySoundEffect();
@@ -12,6 +15,7 @@ public class InteractableObject : MonoBehaviour, IPointerClickHandler
 
     protected virtual void PlaySoundEffect() 
     {
-        //todo: default sound effect for non-special items
+        AudioManager.Instance.PlayOneShot(_clickSound, transform.position);
+        Debug.Log("Click");
     }
 }

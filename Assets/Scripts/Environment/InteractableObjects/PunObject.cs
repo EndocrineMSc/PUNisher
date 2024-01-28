@@ -7,7 +7,6 @@ public class PunObject : InteractableObject, IPointerClickHandler
     #region Fields and Properties
 
     [SerializeField] private float _activationDistance = 1f;
-    [SerializeField] private EventReference _soundEffect;
     private RectTransform _rectTransform;
     private Transform _playerTransform;
 
@@ -26,7 +25,7 @@ public class PunObject : InteractableObject, IPointerClickHandler
     public override void OnPointerClick(PointerEventData eventData)
     {
         base.OnPointerClick(eventData);
-        //todo player feedback of some kind?
+        PlaySoundEffect();
 
         var playerPosition = Camera.main.WorldToScreenPoint(_playerTransform.position);
 
@@ -39,11 +38,5 @@ public class PunObject : InteractableObject, IPointerClickHandler
             Destroy(gameObject);
         }
     }
-
-    protected override void PlaySoundEffect()
-    {
-        //todo: connect new, individual sound effect
-    }
-
     #endregion
 }

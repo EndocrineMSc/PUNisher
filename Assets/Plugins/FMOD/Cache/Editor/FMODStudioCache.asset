@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9127943709683573329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_hm
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_hm
+  Guid:
+    Data1: 725038783
+    Data2: 1307764805
+    Data3: 926101395
+    Data4: -1739673098
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6965068877321084959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,11 +69,92 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638419518650000000
+  lastModified: 638420590270000000
   FileSizes:
   - Name: Desktop
-    Value: 1122
+    Value: 1806
   Exists: 1
+--- !u!114 &-6419528380774417007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_laugh7
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_laugh7
+  Guid:
+    Data1: -798824214
+    Data2: 1158647092
+    Data3: 1709568138
+    Data4: 950591756
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5370818158838511160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/Music_Menu_Music
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/Music_Menu_Music
+  Guid:
+    Data1: 77806571
+    Data2: 1285273340
+    Data3: -1697348198
+    Data4: -1750979991
+  Banks:
+  - {fileID: 2453025356702693663}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 50181
+--- !u!114 &-4997351324349236712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_eyeroll1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_eyeroll1
+  Guid:
+    Data1: 1138574643
+    Data2: 1123754850
+    Data3: 828529804
+    Data4: 731388009
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4764526131418357758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,11 +170,146 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638419518650000000
+  lastModified: 638420590270000000
   FileSizes:
   - Name: Desktop
     Value: 1706
   Exists: 1
+--- !u!114 &-3584608563694174863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_laugh2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_laugh2
+  Guid:
+    Data1: -1533321904
+    Data2: 1095563252
+    Data3: -785448047
+    Data4: -1150160188
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1807557995058848817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_laugh1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_laugh1
+  Guid:
+    Data1: -1546392612
+    Data2: 1329318271
+    Data3: 80834713
+    Data4: 1377497127
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1779894437505036753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_chuckle2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_chuckle2
+  Guid:
+    Data1: -453478090
+    Data2: 1301435186
+    Data3: -877649475
+    Data4: 357337882
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-744944113374423238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_laugh6
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_laugh6
+  Guid:
+    Data1: -38884278
+    Data2: 1239920176
+    Data3: 760062338
+    Data4: 695400197
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-561171101544573028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_grunt2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_grunt2
+  Guid:
+    Data1: 750845199
+    Data2: 1132973053
+    Data3: -522344536
+    Data4: -1182618553
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,13 +330,57 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 7093218763502632825}
   - {fileID: -6965068877321084959}
+  - {fileID: -5370818158838511160}
+  - {fileID: -561171101544573028}
+  - {fileID: 7420800630951182334}
+  - {fileID: -4997351324349236712}
+  - {fileID: -1779894437505036753}
+  - {fileID: -744944113374423238}
+  - {fileID: -3584608563694174863}
+  - {fileID: 6421350425749917749}
+  - {fileID: 788063075416462907}
+  - {fileID: 2887099497487461074}
+  - {fileID: 138615104816179363}
+  - {fileID: -9127943709683573329}
+  - {fileID: 6726463471452146092}
+  - {fileID: 6949854131677538332}
+  - {fileID: -1807557995058848817}
+  - {fileID: 3910893733900870774}
+  - {fileID: -6419528380774417007}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4764526131418357758}
   StringsBanks:
   - {fileID: -6706701397041019520}
-  cacheTime: 638419518670000000
+  cacheTime: 638420590270000000
   cacheVersion: 131616
+--- !u!114 &138615104816179363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_footsteps
+  Guid:
+    Data1: -1399378778
+    Data2: 1111145487
+    Data3: -1565928777
+    Data4: -1269510744
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &244477066174226654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,11 +396,38 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638419518670000000
+  lastModified: 638420590270000000
   FileSizes:
   - Name: Desktop
-    Value: 160384
+    Value: 487360
   Exists: 1
+--- !u!114 &788063075416462907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_grunt1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_grunt1
+  Guid:
+    Data1: -1420393856
+    Data2: 1074304669
+    Data3: -616831044
+    Data4: 541432521
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2453025356702693663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,11 +443,146 @@ MonoBehaviour:
   Path: Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638419518670000000
+  lastModified: 638420590270000000
   FileSizes:
   - Name: Desktop
-    Value: 825120
+    Value: 1454304
   Exists: 1
+--- !u!114 &2887099497487461074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_uff2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_uff2
+  Guid:
+    Data1: 620738688
+    Data2: 1156197078
+    Data3: 1409504916
+    Data4: 1711446378
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3910893733900870774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_laugh3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_laugh3
+  Guid:
+    Data1: -199872022
+    Data2: 1091870057
+    Data3: -1580913251
+    Data4: -908696138
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6421350425749917749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_chuckle1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_chuckle1
+  Guid:
+    Data1: 1844975476
+    Data2: 1168820283
+    Data3: 1854035596
+    Data4: 1268026782
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6726463471452146092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_laugh5
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_laugh5
+  Guid:
+    Data1: 1699355591
+    Data2: 1204827049
+    Data3: 235214494
+    Data4: -103621768
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6949854131677538332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_uff1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_uff1
+  Guid:
+    Data1: 181509076
+    Data2: 1220638313
+    Data3: 1675049352
+    Data4: -313806819
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7093218763502632825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +610,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 69615
+--- !u!114 &7420800630951182334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_laugh4
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_laugh4
+  Guid:
+    Data1: 970332966
+    Data2: 1181803828
+    Data3: 271341721
+    Data4: -134487780
+  Banks:
+  - {fileID: 244477066174226654}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

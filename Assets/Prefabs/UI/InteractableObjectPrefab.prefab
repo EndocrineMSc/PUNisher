@@ -118,6 +118,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f271771d0d2324fbdd357b73194bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clickSound:
+    Guid:
+      Data1: 725038783
+      Data2: 1307764805
+      Data3: 926101395
+      Data4: -1739673098
+    Path: event:/SFX/SFX_hm
 --- !u!1 &8730156586798991344
 GameObject:
   m_ObjectHideFlags: 0
