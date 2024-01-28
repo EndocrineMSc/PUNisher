@@ -21,6 +21,10 @@ public class PlayerMovement : MonoBehaviour
 
     #region Methods
 
+    private void Awake()
+    {
+        PlayerStopHandler.dialogueEngaged = false;
+    }
     void Start() {
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
