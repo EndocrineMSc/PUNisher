@@ -28,9 +28,12 @@ public class PunObject : InteractableObject, IPointerClickHandler
         base.OnPointerClick(eventData);
         //todo player feedback of some kind?
 
-        var worldPosition = Camera.main.ScreenToWorldPoint(_rectTransform.localPosition);
-        var distance = Mathf.Abs(Vector2.Distance(worldPosition, _playerTransform.position));
+        var playerPosition = Camera.main.WorldToScreenPoint(_playerTransform.position);
 
+
+        var distance = Vector2.Distance(playerPosition, _rectTransform.position);
+
+        Debug.Log(distance);
         if (distance < _activationDistance) {
             PunManager.Instance.PunFound();
             Destroy(gameObject);
