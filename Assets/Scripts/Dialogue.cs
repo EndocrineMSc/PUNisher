@@ -22,6 +22,13 @@ public class Sentence
 }
 public class Dialogue : MonoBehaviour
 {
+    [SerializeField] int punsNeeded;
+    int punsCollected = 1;
+
+    public bool fighting = false;
+    public bool beaten = false;
+
+    [Header("Dialogue")]
     [SerializeField] GameObject dialogueBox;
     [SerializeField] TMP_Text nameTag;
     [SerializeField] TMP_Text dialogueText;
@@ -30,11 +37,7 @@ public class Dialogue : MonoBehaviour
     bool showDialogue = false;
      int currentLine;
 
-    public bool fighting = false;
-    public bool beaten = false;
    
-    [SerializeField] int punsNeeded;
-    int punsCollected = 1;
   
     void OnTriggerEnter(Collider other)
     {
