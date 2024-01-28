@@ -723,7 +723,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -914,7 +914,7 @@ GameObject:
   - component: {fileID: 3476789250488595}
   - component: {fileID: 8244827681299750580}
   m_Layer: 0
-  m_Name: DojoMaster
+  m_Name: Punkther
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -948,34 +948,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba05e54b4de8ae4b9ecb1946cab4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punsNeeded: 5
+  fighting: 0
+  beaten: 0
   dialogueBox: {fileID: 7856377339385636980}
   nameTag: {fileID: 4835300200979773105}
   dialogueText: {fileID: 1038258515214740943}
   defaultDialogue:
-  - name: A
-    text: I am a hero!
+  - name: Young PUNdawan
+    text: I will PUNish you! PUNch PUNch!
     image: {fileID: 8545733822813823363}
     moodSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  - name: B
+  - name: PUNkther
     text: Well, let's see!
     image: {fileID: 2382334520007717300}
     moodSprite: {fileID: 0}
   fightingDialogue:
-  - name: B
+  - name: PUNkther
     text: ...
     image: {fileID: 2382334520007717300}
     moodSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  - name: A
-    text: I will PUNish you! PUNch PUNch!
+  - name: Young PUNdawan
+    text: What do you call a panther that likes to play music? A punkther.
     image: {fileID: 8545733822813823363}
     moodSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  - name: B
-    text: Haha, you got me!
+  - name: PUNkther
+    text: This one was a little bit obvious.
     image: {fileID: 2382334520007717300}
     moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  fighting: 0
-  beaten: 0
-  punsNeeded: 0
+  - name: Young PUNdawan
+    text: Why does the punk have diabetes? Because he always ate punk food.
+    image: {fileID: 8545733822813823363}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - name: PUNkther
+    text: Funny, a little.
+    image: {fileID: 2382334520007717300}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - name: Young PUNdawan
+    text: What do you call a group of sleepy panthers? Cat-nappers!
+    image: {fileID: 8545733822813823363}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - name: PUNkther
+    text: 'Purrr .. I mean - what?
+
+      How can you have an influence on me?'
+    image: {fileID: 2382334520007717300}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - name: Young PUNdawan
+    text: What does a punk eat at parties? Punk-in pie.
+    image: {fileID: 8545733822813823363}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - name: PUNkther
+    text: "Hehe! \n*clearing his throat* Now I'm hungry."
+    image: {fileID: 2382334520007717300}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - name: Young PUNdawan
+    text: Why was the panther angry at the computer? It kept having meow-lfunctions!
+    image: {fileID: 8545733822813823363}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - name: PUNkther
+    text: 'Haha, yea, programming REALLY is painful sometimes!
+
+      Well done.
+      You''re a real PUNisher now!'
+    image: {fileID: 2382334520007717300}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - name: Master PUNda
+    text: Huuh, revenge was taken!
+    image: {fileID: 8545733822813823363}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - name: Young PUNdawan
+    text: Master, you're not dead?
+    image: {fileID: 8545733822813823363}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - name: Master PUNda
+    text: 'All part of the class. Here''s your certificate.
+
+      So long, have
+      pun.'
+    image: {fileID: 8545733822813823363}
+    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &8545733822813823363
 GameObject:
   m_ObjectHideFlags: 0
