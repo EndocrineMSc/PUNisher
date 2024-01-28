@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
             _renderer.flipX = xDistance < 0;
         }
 
-        Debug.Log(PlayerStopHandler.dialogueEngaged);
         ToggleWalkAnimation();
         LerpScale();
     } 
