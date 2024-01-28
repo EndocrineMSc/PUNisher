@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6984485228557915809
 RectTransform:
   m_ObjectHideFlags: 0
@@ -609,7 +609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3767675164868063944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -653,7 +653,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &8880097381831207095
 MonoBehaviour:
@@ -895,6 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba05e54b4de8ae4b9ecb1946cab4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   punsNeeded: 4
   fighting: 0
   beaten: 0
@@ -982,10 +983,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3767675164868063944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 114.999985, y: -65.88519}
-  m_SizeDelta: {x: 170, y: 170}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 180.2645, y: 248.13}
+  m_SizeDelta: {x: 360.5265, y: 496.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6759857281832549112
 CanvasRenderer:
@@ -1015,7 +1016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: aa436ebbaedb77c46b5f5e4f9c557445, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6984485228557915809
 RectTransform:
   m_ObjectHideFlags: 0
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -653,7 +653,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &8880097381831207095
 MonoBehaviour:
@@ -895,10 +895,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba05e54b4de8ae4b9ecb1946cab4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   punsNeeded: 5
   fighting: 0
   beaten: 0
-  nextScene: 5
+  nextScene: 0
   dialogueBox: {fileID: 7856377339385636980}
   nameTag: {fileID: 4835300200979773105}
   dialogueText: {fileID: 1038258515214740943}
@@ -919,7 +920,7 @@ MonoBehaviour:
   - name: Young PUNdawan
     text: What do you call a panther that likes to play music? A punkther.
     image: {fileID: 8545733822813823363}
-    moodSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    moodSprite: {fileID: 0}
   - name: PUNkther
     text: This one was a little bit obvious.
     image: {fileID: 2382334520007717300}
@@ -927,13 +928,13 @@ MonoBehaviour:
   - name: Young PUNdawan
     text: "Why does the punk have diabetes? \nBecause he always ate punk food."
     image: {fileID: 8545733822813823363}
-    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    moodSprite: {fileID: 0}
   - name: PUNkther
     text: Funny, a little.
     image: {fileID: 2382334520007717300}
     moodSprite: {fileID: 0}
   - name: Young PUNdawan
-    text: What do you call a group of sleepy panthers? Cat-nappers!
+    text: "What do you call a group of sleepy panthers? \nCat-nappers!"
     image: {fileID: 8545733822813823363}
     moodSprite: {fileID: 0}
   - name: PUNkther
@@ -951,9 +952,9 @@ MonoBehaviour:
     image: {fileID: 2382334520007717300}
     moodSprite: {fileID: 0}
   - name: Young PUNdawan
-    text: Why was the panther angry at the computer? It kept having meow-lfunctions!
+    text: "Why was the panther angry at the computer? \nIt kept having meow-lfunctions!"
     image: {fileID: 8545733822813823363}
-    moodSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    moodSprite: {fileID: 0}
   - name: PUNkther
     text: 'Haha, yea, programming REALLY is painful sometimes!
 
@@ -964,18 +965,18 @@ MonoBehaviour:
   - name: Master PUNda
     text: Huuh, revenge was taken!
     image: {fileID: 8545733822813823363}
-    moodSprite: {fileID: 0}
+    moodSprite: {fileID: 21300000, guid: 5ba5d49633c795c4e9f6ac18fbf8de98, type: 3}
   - name: Young PUNdawan
     text: Master, you're not dead?
     image: {fileID: 8545733822813823363}
-    moodSprite: {fileID: 0}
+    moodSprite: {fileID: 21300000, guid: aa436ebbaedb77c46b5f5e4f9c557445, type: 3}
   - name: Master PUNda
     text: 'All part of the class. Here''s your certificate.
 
       So long, have
       pun.'
     image: {fileID: 8545733822813823363}
-    moodSprite: {fileID: 0}
+    moodSprite: {fileID: 21300000, guid: 5ba5d49633c795c4e9f6ac18fbf8de98, type: 3}
 --- !u!1 &8545733822813823363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,10 +1009,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3767675164868063944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 114.999985, y: -65.88519}
-  m_SizeDelta: {x: 170, y: 170}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 180.2645, y: 248.13}
+  m_SizeDelta: {x: 360.5265, y: 496.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6759857281832549112
 CanvasRenderer:
@@ -1041,7 +1042,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: aa436ebbaedb77c46b5f5e4f9c557445, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

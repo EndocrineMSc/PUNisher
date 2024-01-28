@@ -556,6 +556,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 1.432237
       objectReference: {fileID: 0}
+    - target: {fileID: 7149703283767717531, guid: 63e625df995f5c04c9f1d5a3b4dc63c9, type: 3}
+      propertyPath: m_Radius
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149703283767717531, guid: 63e625df995f5c04c9f1d5a3b4dc63c9, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.66
+      objectReference: {fileID: 0}
     - target: {fileID: 8968134861554689905, guid: 63e625df995f5c04c9f1d5a3b4dc63c9, type: 3}
       propertyPath: m_Size.x
       value: 0.5102644
@@ -885,7 +893,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3476789250488595, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2121307
+      value: 1.0180686
       objectReference: {fileID: 0}
     - target: {fileID: 3476789250488595, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_LocalScale.y
@@ -893,7 +901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3476789250488595, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.0197
+      value: -2.9227
       objectReference: {fileID: 0}
     - target: {fileID: 3476789250488595, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_LocalPosition.y
@@ -951,9 +959,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8260442746902416531, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1678591686}
     - targetCorrespondingSourceObject: {fileID: 8260442746902416531, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1678591688}
@@ -1048,7 +1053,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!224 &1230294311 stripped
 RectTransform:
@@ -1607,58 +1612,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8260442746902416531, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
   m_PrefabInstance: {fileID: 904747932}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &1678591686
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678591683}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!50 &1678591688
 Rigidbody2D:
   serializedVersion: 4
@@ -1718,7 +1671,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.031121254, y: 0.30747432}
+  m_Offset: {x: -0.03649673, y: 0.30747432}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1729,7 +1682,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.95533776, y: 0.38505137}
+  m_Size: {x: 1.1702294, y: 0.38505137}
   m_EdgeRadius: 0
 --- !u!1001 &1682146542
 PrefabInstance:

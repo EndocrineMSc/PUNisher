@@ -42,6 +42,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadScene(SceneName sceneName) {
         if (!_isFading)
             StartCoroutine(FadeOutScene(sceneName));
+        Debug.Log("hey");
     }
 
     private void FadeInScene(Scene scene, LoadSceneMode mode) {

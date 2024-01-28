@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -46,10 +47,10 @@ public class Dialogue : MonoBehaviour
     {
         playerInRange = true;
     }
-    //private void OnTriggerExit2D(Collider2D other)
-    //{
-    //    playerInRange = false;
-    //}
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        playerInRange = false;
+    }
     private void Update()
     {
         if (PunManager.Instance)
@@ -58,6 +59,11 @@ public class Dialogue : MonoBehaviour
 
         }
         if(!debug)ShowDialogue(playerInRange);
+
+        Debug.Log(nextScene.ToString());
+
+        if(SceneManager.GetActiveScene().name.Equals("FirstDojo") && currentLine == defaultDialogue.Count) 
+            SceneLoader.Instance.LoadScene(nextScene);
     }
     private void Start()
     {
@@ -67,11 +73,10 @@ public class Dialogue : MonoBehaviour
     }
 
     public void ShowDialogue(bool show) {
-        //if (show) PauseControl.PauseGame();
-        //else PauseControl.ResumeGame();
         PlayerStopHandler.dialogueEngaged = show;
 
         dialogueBox.SetActive(show);
+
         if (!beaten) nextDialogue(0);
         else SceneLoader.Instance.LoadScene(nextScene);
     }

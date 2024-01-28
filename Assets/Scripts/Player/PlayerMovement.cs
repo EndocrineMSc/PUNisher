@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKey(KeyCode.Mouse0) && !PlayerStopHandler.dialogueEngaged) {
+        if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKey(KeyCode.Mouse0)) && !PlayerStopHandler.dialogueEngaged) {
             var targetPosition = GetMouseWorldPosition();
             _agent.SetDestination(targetPosition);
 
@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
             _renderer.flipX = xDistance < 0;
         }
 
+        Debug.Log(PlayerStopHandler.dialogueEngaged);
         ToggleWalkAnimation();
         LerpScale();
     } 

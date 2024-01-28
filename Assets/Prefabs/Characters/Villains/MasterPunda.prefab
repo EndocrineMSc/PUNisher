@@ -609,7 +609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3767675164868063944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -653,7 +653,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &8880097381831207095
 MonoBehaviour:
@@ -895,6 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba05e54b4de8ae4b9ecb1946cab4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   punsNeeded: 0
   fighting: 0
   beaten: 0
@@ -916,7 +917,7 @@ MonoBehaviour:
   - name: Young PUNdawan
     text: Master, who is that?
     image: {fileID: 2382334520007717300}
-    moodSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    moodSprite: {fileID: 21300000, guid: aa436ebbaedb77c46b5f5e4f9c557445, type: 3}
   - name: Master PUNda
     text: "Stay back, young PUNdawan. Your master will take care of this.\r."
     image: {fileID: 8545733822813823363}
@@ -932,7 +933,7 @@ MonoBehaviour:
   - name: Master PUNda
     text: "*coughing* Nooo ...\n(starts laughing so hard until he faints)\r."
     image: {fileID: 8545733822813823363}
-    moodSprite: {fileID: 0}
+    moodSprite: {fileID: 21300000, guid: 5ba5d49633c795c4e9f6ac18fbf8de98, type: 3}
   - name: Master PUNda
     text: "(speaking as a spiritual voice)\nYou must avenge meee. Collect puns and
       face your destinyyy.\r."
@@ -941,7 +942,7 @@ MonoBehaviour:
   - name: Young PUNdawan
     text: "You can count on me, Master!\nI will become the best PUNisher of PUNdala!\r."
     image: {fileID: 2382334520007717300}
-    moodSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    moodSprite: {fileID: 21300000, guid: aa436ebbaedb77c46b5f5e4f9c557445, type: 3}
   fightingDialogue: []
 --- !u!1 &8545733822813823363
 GameObject:
