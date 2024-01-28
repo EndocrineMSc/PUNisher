@@ -56,16 +56,16 @@ public class SceneLoader : MonoBehaviour
                     AudioManager.Instance.CreateInstance(_menuMusic).start();
                     break;
                 case SceneName.FirstDojo:
-                    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                    AudioManager.Instance.CreateInstance(_dojo1).start();
                     break;
                 case SceneName.SecondDojo:
-                    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                    AudioManager.Instance.CreateInstance(_dojo2).start();
                     break;
                 case SceneName.ThirdDojo:
-                    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                    AudioManager.Instance.CreateInstance(_dojo3).start();
                     break;
                 case SceneName.FourthDojo:
-                    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                    AudioManager.Instance.CreateInstance(_dojo4).start();
                     break;
             }
         }
