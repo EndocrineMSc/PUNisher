@@ -7,7 +7,7 @@ public class VolumeSlider : MonoBehaviour
     private Slider _volumeSlider;
 
     void Awake() {
-        _volumeSlider = GetComponentInChildren<Slider>();
+        _volumeSlider = GetComponent<Slider>();
     }
 
     void OnEnable() {
