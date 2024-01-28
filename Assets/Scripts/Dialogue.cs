@@ -22,6 +22,7 @@ public class Sentence
 }
 public class Dialogue : MonoBehaviour
 {
+    [SerializeField] bool debug = false;
     [SerializeField] int punsNeeded;
     int punsCollected = 1;
     bool playerInRange = false;
@@ -56,11 +57,11 @@ public class Dialogue : MonoBehaviour
             punsCollected = PunManager.Instance.PunsFound;
 
         }
-        //ShowDialogue(playerInRange);
+        if(!debug)ShowDialogue(playerInRange);
     }
     private void Start()
     {
-        ShowDialogue(true);
+        if(debug) ShowDialogue(true);
         var punObjects = GameObject.FindGameObjectsWithTag("PunObject");
         punsNeeded = punObjects.Length;
     }
@@ -75,7 +76,6 @@ public class Dialogue : MonoBehaviour
     }
 
     void nextDialogue(int current) {
-        Debug.Log("new");
         currentLine = current;
         nextDialogue();
     }
