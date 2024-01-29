@@ -3,7 +3,10 @@ guid: 58f130f92f624654e9590cf8228d01f1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - <SecondDojoData>k__BackingField: {fileID: 11400000, guid: 3f194b870215c604bb4328d249b3b0fe, type: 2}
+  - <ThirdDojoData>k__BackingField: {fileID: 11400000, guid: 1c713827097c1894a8c293eb58822641, type: 2}
+  - <FourthDojoData>k__BackingField: {fileID: 11400000, guid: 43383ad0e89cc2040bc9001610cf41fa, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
