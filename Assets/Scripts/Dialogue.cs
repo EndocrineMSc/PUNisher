@@ -79,8 +79,11 @@ public class Dialogue : MonoBehaviour
             ShowDialogue();
         }     
 
-        if ((firstDojo || beaten) && currentLine > defaultDialogue.Count) 
+        if (firstDojo && currentLine > defaultDialogue.Count) 
             SceneLoader.Instance.LoadScene(nextScene);
+        if (beaten && currentLine > fightingDialogue.Count) 
+            SceneLoader.Instance.LoadScene(nextScene);
+
     }
 
     public void ShowDialogue() {
