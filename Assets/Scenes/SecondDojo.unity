@@ -904,7 +904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 0.46
+  m_ScaleFactor: 0.65
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -1014,7 +1014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5783851777478448419, guid: 210e30afd722e4f45a0b628920ed6b24, type: 3}
       propertyPath: m_SortingOrder
-      value: 32767
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8260442746902416531, guid: 210e30afd722e4f45a0b628920ed6b24, type: 3}
       propertyPath: m_Name
