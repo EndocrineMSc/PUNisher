@@ -22,21 +22,11 @@ public class PunObject : InteractableObject, IPointerClickHandler
         _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    public override void OnPointerClick(PointerEventData eventData)
+    public override void TriggerObjectFeedback()
     {
-        base.OnPointerClick(eventData);
-        PlaySoundEffect();
-
-        var playerPosition = Camera.main.WorldToScreenPoint(_playerTransform.position);
-
-
-        var distance = Vector2.Distance(playerPosition, _rectTransform.position);
-
-        Debug.Log(distance);
-        //if (distance < _activationDistance) {
-            PunManager.Instance.PunFound();
-            Destroy(gameObject);
-        //}
+        base.TriggerObjectFeedback();
+        PunManager.Instance.PunFound();
+        Destroy(gameObject);
     }
     #endregion
 }

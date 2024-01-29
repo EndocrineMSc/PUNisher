@@ -36,6 +36,8 @@ public class SceneLoader : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        _blackScreen.enabled = true;
     }
 
     private void OnEnable() {

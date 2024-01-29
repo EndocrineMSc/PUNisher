@@ -8,10 +8,9 @@ public class LevelScaling : MonoBehaviour
 
     public static LevelScaling Instance {get; private set;}
 
-    [field: SerializeField] public Vector3 MaxScale {get; private set;}
-    [field: SerializeField] public Vector3 MinScale {get; private set;}
-    [field: SerializeField] public float MinTraversableY {get; private set;}
-    [field: SerializeField] public float MaxTraversableY {get; private set;}
+    [field: SerializeField] public LevelScalingData SecondDojoData {get; private set;} 
+    [field: SerializeField] public LevelScalingData ThirdDojoData {get; private set;} 
+    [field: SerializeField] public LevelScalingData FourthDojoData {get; private set;} 
 
     #endregion
 
@@ -20,6 +19,7 @@ public class LevelScaling : MonoBehaviour
     private void Awake() {
         if (Instance == null) {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else {
             Destroy(gameObject);
@@ -27,5 +27,4 @@ public class LevelScaling : MonoBehaviour
     }
 
     #endregion
-
 }
