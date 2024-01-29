@@ -896,7 +896,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
-  punsNeeded: 4
   fighting: 0
   beaten: 0
   nextScene: 4
@@ -936,7 +935,7 @@ MonoBehaviour:
   - name: Young PUNdawan
     text: "Why did the fish blush at the aquarium? \nBecause it saw the ocean's bottom."
     image: {fileID: 0}
-    moodSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    moodSprite: {fileID: 0}
   - name: Orca
     text: "*caugh* \nThis one was good!"
     image: {fileID: 2382334520007717300}
