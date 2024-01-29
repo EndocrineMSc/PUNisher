@@ -79,7 +79,7 @@ public class Dialogue : MonoBehaviour
             ShowDialogue();
         }     
 
-        if (firstDojo && currentLine > defaultDialogue.Count) 
+        if ((firstDojo || beaten) && currentLine > defaultDialogue.Count) 
             SceneLoader.Instance.LoadScene(nextScene);
     }
 
@@ -92,7 +92,7 @@ public class Dialogue : MonoBehaviour
         if (!beaten) {
             NextDialogue();
         }
-        else {
+       else {
             SceneLoader.Instance.LoadScene(nextScene);
         }
     }
@@ -139,7 +139,7 @@ public class Dialogue : MonoBehaviour
         }
         else if (currentLine == defaultDialogue.Count && !firstDojo)
         {
-            if (CompareTag("Enemy") && fightingDialogue.Count != 0 && punsCollected >= punsNeeded)
+            if (CompareTag("Enemy") && fightingDialogue.Count != 0 && punsCollected == punsNeeded)
             {
                 currentLine = 0;
                 fighting = true;
@@ -195,14 +195,13 @@ public class Dialogue : MonoBehaviour
             nameTag.text = currentSentence.name;
         }
         
-        if (currentLine >= fightingDialogue.Count - 1) {
+        if (currentLine == fightingDialogue.Count - 1) {
             beaten = true;
         } 
         
-        if(currentLine >= fightingDialogue.Count) {
+        if(currentLine == fightingDialogue.Count) {
             dialogueBox.SetActive(false);
             PlayerStopHandler.dialogueEngaged = false;
-            return;
         } 
 
         currentLine++;
