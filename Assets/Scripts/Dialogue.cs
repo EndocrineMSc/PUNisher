@@ -108,12 +108,13 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    GameObject currentImage;
     private void AdvanceDefaultDialogue() 
     {
         if (currentLine <= defaultDialogue.Count - 1)
         {
             var currentSentence = defaultDialogue[currentLine];
-            var currentImage = currentSentence.image;
+            currentImage = currentSentence.image;
             
             if (currentLine != 0) 
             {
@@ -145,6 +146,7 @@ public class Dialogue : MonoBehaviour
             }
         }
         else {
+            currentImage.SetActive(false);
             currentLine = 0;
             dialogueBox.SetActive(false);
             PlayerStopHandler.dialogueEngaged = false;
