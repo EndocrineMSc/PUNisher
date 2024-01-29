@@ -30,6 +30,7 @@ public class Dialogue : MonoBehaviour
     int punsNeeded;
     int punsCollected = 1;
     bool playerInRange = false;
+    bool firstDojo;
 
     public bool fighting = false;
     public bool beaten = false;
@@ -42,7 +43,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] List<Sentence> defaultDialogue;
     [SerializeField] List<Sentence> fightingDialogue;
 
-    int currentLine = 0;
+    [SerializeField] int currentLine = 0;
 
    #endregion
 
@@ -63,7 +64,7 @@ public class Dialogue : MonoBehaviour
         if (debug) {
             ShowDialogue();
         }
-
+        firstDojo = SceneManager.GetActiveScene().name.Equals("FirstDojo");
         var punObjects = GameObject.FindGameObjectsWithTag("PunObject");
         punsNeeded = punObjects.Length;
     }
@@ -78,8 +79,11 @@ public class Dialogue : MonoBehaviour
             ShowDialogue();
         }     
 
-        if (SceneManager.GetActiveScene().name.Equals("FirstDojo") && currentLine == defaultDialogue.Count) 
+        if (firstDojo && currentLine > defaultDialogue.Count) 
             SceneLoader.Instance.LoadScene(nextScene);
+        if (beaten && currentLine > fightingDialogue.Count) 
+            SceneLoader.Instance.LoadScene(nextScene);
+
     }
 
     public void ShowDialogue() {
@@ -91,7 +95,7 @@ public class Dialogue : MonoBehaviour
         if (!beaten) {
             NextDialogue();
         }
-        else {
+       else {
             SceneLoader.Instance.LoadScene(nextScene);
         }
     }
@@ -108,43 +112,55 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    GameObject currentImage;
     private void AdvanceDefaultDialogue() 
     {
         if (currentLine <= defaultDialogue.Count - 1)
         {
             var currentSentence = defaultDialogue[currentLine];
-            var currentImage = currentSentence.image;
-            
-            if (currentLine != 0) 
+            currentImage = currentSentence.image;
+
+            if (currentLine != 0)
             {
                 var previousImage = defaultDialogue[currentLine - 1].image;
 
-                if (previousImage != currentImage) {
+                if (previousImage != currentImage)
+                {
                     previousImage.SetActive(false);
                 }
             }
 
             currentImage.SetActive(true);
 
-            if (currentSentence.moodSprite != null) {
+            if (currentSentence.moodSprite != null)
+            {
                 currentImage.GetComponent<Image>().sprite = currentSentence.moodSprite;
             }
-    
+
             dialogueText.text = currentSentence.text;
             nameTag.text = currentSentence.name;
-        }       
-        else if (currentLine == defaultDialogue.Count)
-        {        
-            if (CompareTag("Enemy") && fightingDialogue.Count != 0 && punsCollected >= punsNeeded) { 
+        }
+        else if (currentLine == defaultDialogue.Count && !firstDojo)
+        {
+            if (CompareTag("Enemy") && fightingDialogue.Count != 0 && punsCollected == punsNeeded)
+            {
                 currentLine = 0;
-                fighting = true;           
+                fighting = true;
                 return;
-            } 
-            else {
+            }
+            else
+            {
                 dialogueText.text = "You still have a lot to learn. Come back if you're ready, Young Pundawan.";
             }
         }
-        else {
+        else if (currentLine == defaultDialogue.Count && firstDojo) {
+            currentImage.SetActive(false);
+            dialogueBox.SetActive(false);
+            PlayerStopHandler.dialogueEngaged = false;
+        }
+        else
+        {
+            currentImage.SetActive(false);
             currentLine = 0;
             dialogueBox.SetActive(false);
             PlayerStopHandler.dialogueEngaged = false;
@@ -182,14 +198,13 @@ public class Dialogue : MonoBehaviour
             nameTag.text = currentSentence.name;
         }
         
-        if (currentLine >= fightingDialogue.Count - 1) {
+        if (currentLine == fightingDialogue.Count - 1) {
             beaten = true;
         } 
         
-        if(currentLine >= fightingDialogue.Count) {
+        if(currentLine == fightingDialogue.Count) {
             dialogueBox.SetActive(false);
             PlayerStopHandler.dialogueEngaged = false;
-            return;
         } 
 
         currentLine++;
