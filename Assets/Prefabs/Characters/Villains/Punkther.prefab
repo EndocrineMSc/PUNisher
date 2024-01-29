@@ -609,7 +609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3767675164868063944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -939,7 +939,7 @@ MonoBehaviour:
   - name: PUNkther
     text: 'Purrr .. I mean - what?
 
-      How can you have an influence on me?'
+      How can you have an affect on me?'
     image: {fileID: 2382334520007717300}
     moodSprite: {fileID: 0}
   - name: Young PUNdawan
