@@ -11,6 +11,12 @@ public class JamEvents
         OnInteractableObjectClicked.Invoke(interactableObject);
     }
 
+    public static event Action OnPunFound;
+
+    public static void TriggerPunFound() {
+        OnPunFound.Invoke();
+    }
+
     #endregion
 
     #region Dialogue

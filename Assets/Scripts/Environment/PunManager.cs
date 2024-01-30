@@ -20,10 +20,17 @@ public class PunManager : MonoBehaviour
             Destroy(gameObject);    
     }
 
-    public void PunFound() {
+    private void OnEnable() {
+        JamEvents.OnPunFound += PunFound;
+    }
+
+    private void OnDisable() {
+        JamEvents.OnPunFound -= PunFound;
+    }
+
+    private void PunFound() {
         PunsFound += 1;
     }
 
     #endregion
-
 }

@@ -77,7 +77,11 @@ public class Dialogue : MonoBehaviour
 
         if (!debug && playerInRange) {
             ShowDialogue();
-        }     
+        }   
+
+        if (PlayerStopHandler.dialogueEngaged && Input.GetKeyUp(KeyCode.Mouse0)) {
+            NextDialogue();
+        }
 
         if (firstDojo && currentLine > defaultDialogue.Count) 
             SceneLoader.Instance.LoadScene(nextScene);

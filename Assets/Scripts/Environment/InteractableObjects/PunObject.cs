@@ -25,7 +25,7 @@ public class PunObject : InteractableObject, IPointerClickHandler
     public override void TriggerObjectFeedback()
     {
         base.TriggerObjectFeedback();
-        PunManager.Instance.PunFound();
+        JamEvents.TriggerPunFound();
         Destroy(gameObject);
     }
     #endregion

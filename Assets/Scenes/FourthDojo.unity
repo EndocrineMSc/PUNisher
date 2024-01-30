@@ -287,7 +287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5921024675514678389, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 89
+      value: 76
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 0.65
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -1114,6 +1114,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 390744742}
     m_Modifications:
+    - target: {fileID: 380847572323690, guid: b6c0882e2e114c3428628610d73cb78e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 934
+      objectReference: {fileID: 0}
+    - target: {fileID: 380847572323690, guid: b6c0882e2e114c3428628610d73cb78e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 596
+      objectReference: {fileID: 0}
+    - target: {fileID: 380847572323690, guid: b6c0882e2e114c3428628610d73cb78e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 1622959466812819941, guid: b6c0882e2e114c3428628610d73cb78e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1287,10 +1299,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 104726163214966310, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_margin.w
+      value: -10.736916
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_margin.y
+      value: 20.13173
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_margin.z
+      value: -256.2272
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
+    - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_lineSpacing
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5715898849919025054, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
+    - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2461180380165599541, guid: 51bb660a1347c7644825b3214505561f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextDialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 4835300200979773105, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
     - target: {fileID: 7856377339385636980, guid: 51bb660a1347c7644825b3214505561f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2094,10 +2146,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 579171649643624387, guid: 4c7acc842872cd34185dd1d4c0841169, type: 3}
-      propertyPath: _fadeDuration
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2141801629364364003, guid: 4c7acc842872cd34185dd1d4c0841169, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
