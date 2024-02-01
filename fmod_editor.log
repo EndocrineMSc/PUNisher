@@ -7,19 +7,215 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000271102C9588 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000253F6F61A98 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000253B2037888, queue head = 00000250D510A4C8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000253B2037888
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3205024
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10176
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000250D031F530
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2024-01-28_GGJ-2024_Team_JESKIL_Main_Theme_4_4_110_bpm_v001', format=5, channels=2, frequency=48000, lengthbytes=627136, lengthpcm=2408727, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.969940.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000253B2037888
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 466880
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 20480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C03491F358
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8592E3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8592E3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8592E4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8592E4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000252B23E7358
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grunt2', format=5, channels=2, frequency=48000, lengthbytes=6944, lengthpcm=46932, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.413452.
+[LOG] SoundI::release                          : 2024-01-28_GGJ-2024_Team_JESKIL_Main_Theme_4_4_110_bpm_v001 (00000252B8D90A68)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Main_Theme_4_4_110_bpm_v001 (0000025363F7C498)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Main_Theme_4_4_110_bpm_v001 (00000252B8D8E038)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002538A6A5F68, queue head = 00000250D510A4C8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002538A6A5F68
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3205024
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10176
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000250C4287AE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001', format=5, channels=2, frequency=48000, lengthbytes=503040, lengthpcm=1848000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.461975.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002538A6A5F68
+[LOG] SoundI::release                          : 2024-01-28_GGJ-2024_Team_JESKIL_Main_Theme_4_4_110_bpm_v001 (00000253B2037888)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Main_Theme_4_4_110_bpm_v001 (00000252AAEE2BF8)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Main_Theme_4_4_110_bpm_v001 (000002538A6A3898)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002538A6A6118, queue head = 00000250D510A4C8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002538A6A6118
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3205024
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10176
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000252AB8FB820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001', format=5, channels=2, frequency=48000, lengthbytes=503040, lengthpcm=1848000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.461975.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002538A6A6118
+[LOG] SoundI::release                          : 2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (000002538A6A5F68)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253D402BBF8)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (000002538A6A78B8)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000252B8D8EDB8, queue head = 00000250D510A4C8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000252B8D8EDB8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3205024
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10176
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000252AAFBFDF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001', format=5, channels=2, frequency=48000, lengthbytes=503040, lengthpcm=1848000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.461975.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000252B8D8EDB8
+[LOG] SoundI::release                          : 2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (000002538A6A6118)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253D402B238)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (000002538A6A4E88)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000253B202FD58, queue head = 00000250D510A4C8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000253B202FD58
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3205024
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10176
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000250D031F530
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001', format=5, channels=2, frequency=48000, lengthbytes=503040, lengthpcm=1848000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.461975.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000253B202FD58
+[LOG] SoundI::release                          : 2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000252B8D8EDB8)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (000002538A8D76F8)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000252B8D8F2C8)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000253B2032E48, queue head = 00000250D510A4C8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000253B2032E48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3205024
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10176
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000252AB8FB5A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001', format=5, channels=2, frequency=48000, lengthbytes=503040, lengthpcm=1848000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.461975.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000253B2032E48
+[LOG] SoundI::release                          : 2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253B202FD58)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (000002538A8D6D38)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253B2031D68)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000253B20336B8, queue head = 00000250D510A4C8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000253B20336B8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3205024
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10176
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000252AAFBFB70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001', format=5, channels=2, frequency=48000, lengthbytes=503040, lengthpcm=1848000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.461975.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000253B20336B8
+[LOG] SoundI::release                          : 2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253B2032E48)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (000002538A8D6ED8)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253B202EE28)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000253B202EE28, queue head = 00000250D510A4C8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000253B202EE28
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/2024-01-26_GGJ_2024_Team_JESKIL/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3205024
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10176
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000252AE92EAA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001', format=5, channels=2, frequency=48000, lengthbytes=503040, lengthpcm=1848000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.461975.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000253B202EE28
+[LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SystemI::mixerResume                     : Resuming output.
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000253B2033D78, queue head = 00000250D510A4C8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000253B2033D78
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000253B2033BC8, queue head = 00000250D510A4C8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000253B2033D78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000253B2033BC8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000253B2033BC8
+[LOG] SoundI::release                          : 2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253B20336B8)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (000002538A8D7558)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253B2033BC8)
+[LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SoundI::release                          : 2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253B202EE28)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253D402B3D8)
+[LOG] SoundI::release                          :     2024-01-28_GGJ-2024_Team_JESKIL_Aqua_Dojo_Theme_4_4_120_bpm_v001 (00000253B2033D78)
+[LOG] SoundI::release                          :  (00000252AE0B8698)
+[LOG] SoundI::release                          :     hm1 (0000025364353A68)
+[LOG] SoundI::release                          :  (00000252AE0B79A8)
+[LOG] SoundI::release                          :     hm2 (00000252AE835858)
+[LOG] SoundI::release                          :  (00000252AE0B7B18)
+[LOG] SoundI::release                          :     hm3 (0000025364353C08)
+[LOG] SoundI::release                          :  (00000252AE0B55B8)
+[LOG] SoundI::release                          :     hm4 (00000252C8E06568)
+[LOG] SoundI::release                          :  (00000252AE0B5448)
+[LOG] SoundI::release                          :     hm5 (00000252C8A79A18)
+[LOG] SoundI::release                          :  (00000252AE0B5B78)
+[LOG] SoundI::release                          :     hm6 (00000253643533E8)
+[LOG] SoundI::release                          :  (00000252AE0B69D8)
+[LOG] SoundI::release                          :     hm7 (00000252C8A79D58)
+[LOG] SoundI::release                          :  (00000252AE0B7C88)
+[LOG] SoundI::release                          :     hm8 (0000025364353DA8)
+[LOG] SoundI::release                          :  (00000252AE0B7838)
+[LOG] SoundI::release                          :     hm9 (00000252C8A79EF8)
+[LOG] SoundI::release                          :  (00000252C958DA48)
+[LOG] SoundI::release                          :     grunt2 (00000252B8FA8A98)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -27,3 +223,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

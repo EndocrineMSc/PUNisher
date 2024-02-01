@@ -1304,6 +1304,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
       propertyPath: m_margin.w
       value: -10.736916
       objectReference: {fileID: 0}
@@ -1318,10 +1322,14 @@ PrefabInstance:
     - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
       propertyPath: m_lineSpacing
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
       propertyPath: m_sharedMaterial
@@ -1333,16 +1341,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 51bb660a1347c7644825b3214505561f, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2461180380165599541, guid: 51bb660a1347c7644825b3214505561f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 4835300200979773105, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835300200979773105, guid: 51bb660a1347c7644825b3214505561f, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4835300200979773105, guid: 51bb660a1347c7644825b3214505561f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7856377339385636980, guid: 51bb660a1347c7644825b3214505561f, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -825,7 +825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_fontSize
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_margin.w
@@ -842,10 +842,10 @@ PrefabInstance:
     - target: {fileID: 1038258515214740943, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 1038258515214740943, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_fontSizeBase
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_sharedMaterial
@@ -861,7 +861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1129705922285366122, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_IsActive
@@ -877,15 +877,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4835300200979773105, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_fontSize
-      value: 45
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4835300200979773105, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4835300200979773105, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_fontSizeBase
-      value: 45
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4835300200979773105, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_sharedMaterial
@@ -893,7 +893,7 @@ PrefabInstance:
       objectReference: {fileID: 5715898849919025054, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
     - target: {fileID: 4835300200979773105, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7856377339385636980, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_IsActive
@@ -902,7 +902,7 @@ PrefabInstance:
     - target: {fileID: 8244827681299750580, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: fightingDialogue.Array.data[5].image
       value: 
-      objectReference: {fileID: 1309282710}
+      objectReference: {fileID: 904747933}
     - target: {fileID: 8260442746902416531, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_Name
       value: Orca
@@ -922,6 +922,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1678591689}
   m_SourcePrefab: {fileID: 100100000, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
+--- !u!1 &904747933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8545733822813823363, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
+  m_PrefabInstance: {fileID: 904747932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1100482726 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1824518124476266213, guid: 63e625df995f5c04c9f1d5a3b4dc63c9, type: 3}
@@ -1138,11 +1143,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c7acc842872cd34185dd1d4c0841169, type: 3}
---- !u!1 &1309282710 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2382334520007717300, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
-  m_PrefabInstance: {fileID: 904747932}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1342546121 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1503163351414323219, guid: 51e237d6c7b0089479c6726a37ccee9e, type: 3}

@@ -538,6 +538,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 4.8
       objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 1038258515214740943, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258515214740943, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 1038258515214740943, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1129705922285366122, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -548,20 +568,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4835300200979773105, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
       propertyPath: m_fontSize
-      value: 45
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4835300200979773105, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4835300200979773105, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
       propertyPath: m_fontSizeBase
-      value: 45
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4835300200979773105, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 5715898849919025054, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4835300200979773105, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
       propertyPath: m_VerticalAlignment
       value: 512

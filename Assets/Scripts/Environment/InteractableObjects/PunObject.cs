@@ -6,7 +6,7 @@ public class PunObject : InteractableObject, IPointerClickHandler
 {
     #region Fields and Properties
 
-    [SerializeField] private float _activationDistance = 1f;
+    
     private RectTransform _rectTransform;
     private Transform _playerTransform;
 

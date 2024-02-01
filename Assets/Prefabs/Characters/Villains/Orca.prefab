@@ -934,7 +934,7 @@ MonoBehaviour:
     moodSprite: {fileID: 0}
   - name: Young PUNdawan
     text: "Why did the fish blush at the aquarium? \nBecause it saw the ocean's bottom."
-    image: {fileID: 0}
+    image: {fileID: 8545733822813823363}
     moodSprite: {fileID: 0}
   - name: Orca
     text: "*caugh* \nThis one was good!"

@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -12,26 +14,69 @@ public class AudioManager : MonoBehaviour
     readonly List<EventInstance> _eventInstances = new();
     readonly List<StudioEventEmitter> _eventEmitters = new();
 
-    Bus _masterBus;
-    Bus _musicBus;
-    Bus _sfxBus;
+    public Bus _masterBus;
+    public Bus _musicBus;
+    public Bus _sfxBus;
+
+    public float currentMasterVolume;
+    public float currentMusicVolume;
+    public float currentSFXVolume;
+
+    bool banksLoaded = false;
+    bool bussesInitialized = false;
 
     #endregion
 
     #region Methods
 
-    void Awake() {
-        if (Instance == null) {
+    void Awake() 
+    {
+        if (Instance == null) 
+        {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else {
+        else 
+        {
             Destroy(gameObject);
         }
-      
+    }
+
+    private void Update()
+    {
+        if (!FMODUnity.RuntimeManager.HaveAllBanksLoaded)
+        {
+            LoadBanks();
+            Debug.Log($"loaded: {FMODUnity.RuntimeManager.HaveAllBanksLoaded}");
+        }if (!banksLoaded && !bussesInitialized)
+            SetBusAndInitialVolume();
+    }
+    void LoadBanks()
+    {
+
+        if (FMODUnity.RuntimeManager.HaveAllBanksLoaded && !banksLoaded)
+        {
+            Debug.Log("~ Debug Bot says: Banks have loaded before manually loading");
+            SetBusAndInitialVolume();
+            banksLoaded = true;
+        }
+        else
+        {
+            Debug.Log("~ Debug Bot says: Banks have not loaded yet");
+            FMODUnity.RuntimeManager.LoadBank("Master.strings");
+            FMODUnity.RuntimeManager.LoadBank("Master");
+            FMODUnity.RuntimeManager.LoadBank("Music");
+            FMODUnity.RuntimeManager.LoadBank("SFX");
+        }
+    }
+
+    void SetBusAndInitialVolume() {
         _masterBus = RuntimeManager.GetBus("bus:/");
         _musicBus = RuntimeManager.GetBus("bus:/Music");
-        _sfxBus = RuntimeManager.GetBus("bus:/SFX");    
+        _sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        //_masterBus.setVolume(1);
+        //_musicBus.setVolume(1);
+        //_sfxBus.setVolume(1);
     }
 
     public void SetVolume(VolumeType type, float value) {
@@ -39,16 +84,19 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("Volume value outside expected range (0 - 1)");
             return;
         }
-
+         
         switch (type) {
             case VolumeType.MASTER:
                 _masterBus.setVolume(value);
+                currentMasterVolume = value;
                 break;
             case VolumeType.MUSIC:
                 _musicBus.setVolume(value);
+                currentMusicVolume = value;
                 break;
             case VolumeType.SFX:
                 _sfxBus.setVolume(value);
+                currentSFXVolume = value;
                 break;
             default: 
                 Debug.LogError("Volume Type is not known!");

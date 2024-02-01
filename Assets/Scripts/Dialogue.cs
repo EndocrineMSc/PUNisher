@@ -1,4 +1,4 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -28,22 +28,23 @@ public class Dialogue : MonoBehaviour
 
     [SerializeField] bool debug = false;
     int punsNeeded;
-    int punsCollected = 1;
+    int punsCollected = 0;
     bool playerInRange = false;
     bool firstDojo;
 
     public bool fighting = false;
     public bool beaten = false;
-    [SerializeField] SceneName nextScene;
+    [SerializeField] SceneName nextScene; 
 
     [Header("Dialogue")]
     [SerializeField] GameObject dialogueBox;
     [SerializeField] TMP_Text nameTag;
     [SerializeField] TMP_Text dialogueText;
+    [SerializeField] int currentLine = 0;
     [SerializeField] List<Sentence> defaultDialogue;
     [SerializeField] List<Sentence> fightingDialogue;
 
-    [SerializeField] int currentLine = 0;
+   
 
    #endregion
 
@@ -62,7 +63,7 @@ public class Dialogue : MonoBehaviour
     private void Start()
     {
         if (debug) {
-            ShowDialogue();
+            ShowDialogue(true);
         }
         firstDojo = SceneManager.GetActiveScene().name.Equals("FirstDojo");
         var punObjects = GameObject.FindGameObjectsWithTag("PunObject");
@@ -75,11 +76,13 @@ public class Dialogue : MonoBehaviour
             punsCollected = PunManager.Instance.PunsFound;
         }
 
-        if (!debug && playerInRange) {
-            ShowDialogue();
-        }   
+        if (!debug && playerInRange)
+            ShowDialogue(true);
 
-        if (PlayerStopHandler.dialogueEngaged && Input.GetKeyUp(KeyCode.Mouse0)) {
+        PlayerStopHandler.dialogueEngaged = dialogueBox.activeInHierarchy;
+
+        if (PlayerStopHandler.dialogueEngaged && Input.GetKeyDown(KeyCode.Mouse0))
+        {
             NextDialogue();
         }
 
@@ -90,18 +93,12 @@ public class Dialogue : MonoBehaviour
 
     }
 
-    public void ShowDialogue() {
+    public void ShowDialogue(bool show) {
+        currentLine = 0;
         playerInRange = false;
-        PlayerStopHandler.dialogueEngaged = true;
 
-        dialogueBox.SetActive(true);
-
-        if (!beaten) {
-            NextDialogue();
-        }
-       else {
-            SceneLoader.Instance.LoadScene(nextScene);
-        }
+        dialogueBox.SetActive(show);
+        NextDialogue();
     }
 
     public void NextDialogue() {
@@ -144,27 +141,42 @@ public class Dialogue : MonoBehaviour
             dialogueText.text = currentSentence.text;
             nameTag.text = currentSentence.name;
         }
-        else if (currentLine == defaultDialogue.Count && !firstDojo)
+        //else if (currentLine == defaultDialogue.Count - 1) { 
+        //    //if(!firstDojo && punsCollected == punsNeeded)  
+        //    //{
+                
+
+        //    //    return;
+        //    //}
+            
+        //}
+        else if (currentLine == defaultDialogue.Count)
         {
-            if (CompareTag("Enemy") && fightingDialogue.Count != 0 && punsCollected == punsNeeded)
+            if (firstDojo)
             {
-                currentLine = 0;
-                fighting = true;
-                return;
+                currentImage.SetActive(false);
+                dialogueBox.SetActive(false);
+                PlayerStopHandler.dialogueEngaged = false;
             }
             else
             {
-                dialogueText.text = "You still have a lot to learn. Come back if you're ready, Young Pundawan.";
+                if (punsCollected != punsNeeded)
+                {
+                    dialogueText.text = "You still have a lot to learn. Come back if you're ready, Young Pundawan.";
+                    return;
+                }
+                else
+                {
+                    fighting = true;
+                    currentLine = 0;
+                    NextDialogue();
+                    return;
+                }
             }
         }
-        else if (currentLine == defaultDialogue.Count && firstDojo) {
-            currentImage.SetActive(false);
-            dialogueBox.SetActive(false);
-            PlayerStopHandler.dialogueEngaged = false;
-        }
-        else
+        else if (currentLine > defaultDialogue.Count)
         {
-            currentImage.SetActive(false);
+           currentImage.SetActive(false);
             currentLine = 0;
             dialogueBox.SetActive(false);
             PlayerStopHandler.dialogueEngaged = false;

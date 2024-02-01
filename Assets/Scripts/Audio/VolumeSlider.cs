@@ -10,22 +10,12 @@ public class VolumeSlider : MonoBehaviour
         _volumeSlider = GetComponent<Slider>();
     }
 
-    void OnEnable() {
-        if (AudioManager.Instance != null)
-            _volumeSlider.value = AudioManager.Instance.GetVolume(volumeType);
-
-        _volumeSlider.onValueChanged.AddListener(OnSliderValueChanged);
-    }
-
-    void Start() {
-        _volumeSlider.value = AudioManager.Instance.GetVolume(volumeType);
-    }
-
-    void OnDisable() {
-        _volumeSlider.onValueChanged.RemoveAllListeners();
-    }
-
-    public void OnSliderValueChanged(float value) {
-        AudioManager.Instance.SetVolume(volumeType, value);
+    private void Update()
+    {
+        if(_volumeSlider.value != AudioManager.Instance.GetVolume(volumeType))
+        {
+            AudioManager.Instance.SetVolume(volumeType, _volumeSlider.value);
+        }
+        //Debug.Log($"{volumeType} Slider value = {_volumeSlider.value}, {volumeType} value at AudioManager: {AudioManager.Instance.GetVolume(volumeType)}");
     }
 }
