@@ -12,10 +12,12 @@ public class VolumeSlider : MonoBehaviour
 
     private void Update()
     {
-        if(_volumeSlider.value != AudioManager.Instance.GetVolume(volumeType))
-        {
-            AudioManager.Instance.SetVolume(volumeType, _volumeSlider.value);
+        if(FMODUnity.RuntimeManager.HaveAllBanksLoaded && AudioManager.Instance.bussesInitialized) { 
+            if(_volumeSlider.value != AudioManager.Instance.GetVolume(volumeType))
+            {
+                AudioManager.Instance.SetVolume(volumeType, _volumeSlider.value);
+            }
         }
-        //Debug.Log($"{volumeType} Slider value = {_volumeSlider.value}, {volumeType} value at AudioManager: {AudioManager.Instance.GetVolume(volumeType)}");
+       // Debug.Log($"{volumeType} Slider value = {_volumeSlider.value}, {volumeType} value at AudioManager: {AudioManager.Instance.GetVolume(volumeType)}");
     }
 }

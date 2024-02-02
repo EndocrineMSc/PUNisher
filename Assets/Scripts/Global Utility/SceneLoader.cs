@@ -55,7 +55,11 @@ public class SceneLoader : MonoBehaviour
 
             switch(sceneName) {
                 case SceneName.MainMenu:
-                    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                    //if (AudioManager.Instance.bussesInitialized)
+                    //{
+                    //    AudioManager.Instance.CreateInstance(_menuMusic).start();
+                        
+                    //}Debug.Log("SceneLoader started _menuMusic"); //never happens
                     break;
                 case SceneName.FirstDojo:
                     AudioManager.Instance.CreateInstance(_dojo1).start();

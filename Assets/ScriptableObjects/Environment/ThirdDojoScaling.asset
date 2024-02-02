@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxScale>k__BackingField: {x: 0.29, y: 0.29, z: 1}
   <MinScale>k__BackingField: {x: 0.15, y: 0.15, z: 1}
-  <MinTraversableY>k__BackingField: -3.617
+  <MinTraversableY>k__BackingField: -6.51
   <MaxTraversableY>k__BackingField: -1.808

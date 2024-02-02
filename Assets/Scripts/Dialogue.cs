@@ -79,7 +79,7 @@ public class Dialogue : MonoBehaviour
         if (!debug && playerInRange)
             ShowDialogue(true);
 
-        PlayerStopHandler.dialogueEngaged = dialogueBox.activeInHierarchy;
+        if(!beaten) PlayerStopHandler.dialogueEngaged = dialogueBox.activeInHierarchy;
 
         if (PlayerStopHandler.dialogueEngaged && Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -163,7 +163,7 @@ public class Dialogue : MonoBehaviour
                 if (punsCollected != punsNeeded)
                 {
                     dialogueText.text = "You still have a lot to learn. Come back if you're ready, Young Pundawan.";
-                    return;
+                    //return;
                 }
                 else
                 {

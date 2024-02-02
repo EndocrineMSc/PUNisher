@@ -22,8 +22,10 @@ public class AudioManager : MonoBehaviour
     public float currentMusicVolume;
     public float currentSFXVolume;
 
+
+    bool banksLoadedManually = false;
     bool banksLoaded = false;
-    bool bussesInitialized = false;
+    public bool bussesInitialized = false;
 
     #endregion
 
@@ -44,21 +46,25 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        if (!FMODUnity.RuntimeManager.HaveAllBanksLoaded)
+        banksLoaded = FMODUnity.RuntimeManager.HaveAllBanksLoaded;
+        if (!banksLoaded)
         {
             LoadBanks();
             Debug.Log($"loaded: {FMODUnity.RuntimeManager.HaveAllBanksLoaded}");
-        }if (!banksLoaded && !bussesInitialized)
-            SetBusAndInitialVolume();
+        }
+        else if (!bussesInitialized)
+            SetBusses();
+
+        Debug.Log($"banksLoaded {banksLoaded}, manually {banksLoadedManually}, bussesInitialized {bussesInitialized}");
     }
     void LoadBanks()
     {
 
-        if (FMODUnity.RuntimeManager.HaveAllBanksLoaded && !banksLoaded)
+        if (FMODUnity.RuntimeManager.HaveAllBanksLoaded && !banksLoadedManually)
         {
             Debug.Log("~ Debug Bot says: Banks have loaded before manually loading");
-            SetBusAndInitialVolume();
-            banksLoaded = true;
+            SetBusses();
+            banksLoadedManually = true;
         }
         else
         {
@@ -66,17 +72,16 @@ public class AudioManager : MonoBehaviour
             FMODUnity.RuntimeManager.LoadBank("Master.strings");
             FMODUnity.RuntimeManager.LoadBank("Master");
             FMODUnity.RuntimeManager.LoadBank("Music");
-            FMODUnity.RuntimeManager.LoadBank("SFX");
+            FMODUnity.RuntimeManager.LoadBank("SFX"); 
         }
     }
 
-    void SetBusAndInitialVolume() {
+    public void SetBusses() {
         _masterBus = RuntimeManager.GetBus("bus:/");
         _musicBus = RuntimeManager.GetBus("bus:/Music");
         _sfxBus = RuntimeManager.GetBus("bus:/SFX");
-        //_masterBus.setVolume(1);
-        //_musicBus.setVolume(1);
-        //_sfxBus.setVolume(1);
+        bussesInitialized = true;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void SetVolume(VolumeType type, float value) {
@@ -137,9 +142,14 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="eventReference">The event reference to the sound to be played</param>
     /// <returns>An event instance that keeps playing the sound on a loop</returns>
+     EventInstance eventInstance;
     public EventInstance CreateInstance(EventReference eventReference) {
-        EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
-        _eventInstances.Add(eventInstance);
+       
+        if (bussesInitialized){
+             eventInstance = RuntimeManager.CreateInstance(eventReference);
+            _eventInstances.Add(eventInstance);
+        }
+        Debug.Log($"AudioManager created instance for eventReference {eventReference}");
         return eventInstance;
     }
 

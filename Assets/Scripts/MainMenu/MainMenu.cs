@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using FMODUnity;
+using FMOD.Studio;
 
 /// <summary>
 /// Attach this script to a MainMenu Canvas with the buttons as children.
@@ -16,12 +17,14 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject _startButton;
     [SerializeField] private GameObject _settingsButton;
     [SerializeField] private GameObject _creditsButton;
+    [SerializeField] private GameObject button;
 
     public static event Action OnMainMenuOpened;
     public static event Action OnSettingsMenuOpened;
     public static event Action OnCreditsMenuOpened;
 
     [SerializeField] EventReference _menuMusic;
+    public bool userActive = false;
 
     #endregion
 
@@ -51,11 +54,30 @@ public class MainMenu : MonoBehaviour
         _startButton.GetComponent<Button>().onClick.AddListener(NewGame);
         _settingsButton.GetComponent<Button>().onClick.AddListener(OpenSettings);
         _creditsButton.GetComponent<Button>().onClick.AddListener(OpenCredits);
-
-        var eventInstance = AudioManager.Instance.CreateInstance(_menuMusic);
-        eventInstance.start();
+        button.GetComponent<Button>().onClick.AddListener(StartSound);
     }
-
+    //private void Update()
+    //{
+    //    if (_menuCanvas.enabled && !userActive) {
+    //        if (Input.GetMouseButtonDown(0))
+    //        {
+    //            var eventInstance = AudioManager.Instance.CreateInstance(_menuMusic);
+    //            eventInstance.start();
+    //            userActive = true;
+    //        }
+    //    }
+        
+    //}
+    public void StartSound()
+    {
+        if (!userActive) { 
+            var eventInstance = AudioManager.Instance.CreateInstance(_menuMusic);
+            eventInstance.start();
+            userActive = true;
+            Debug.Log($"user active {userActive}");
+            Destroy(button);
+        }
+    }
     public static void RaiseMainMenuOpened()
     {
         OnMainMenuOpened?.Invoke();

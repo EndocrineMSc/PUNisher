@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _blackScreen: {fileID: 5996939509925347454}
-  _fadeDuration: 3
+  _fadeDuration: 7
   _menuMusic:
     Guid:
       Data1: 77806571
