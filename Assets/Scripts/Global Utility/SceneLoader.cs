@@ -10,10 +10,12 @@ public class SceneLoader : MonoBehaviour
 {
     #region Fields and Properties
 
-    public static SceneLoader Instance {get; private set;}
+   // public static SceneLoader Instance {get; private set;}
 
     [SerializeField] private Image _blackScreen;
-    [SerializeField] private float _fadeDuration = 2f;
+    [SerializeField] float fadeInDelay = 2f;
+    [SerializeField] private float _fadeOutDuration = 5f;
+    float _fadeInDuration = 10f;
     private bool _isFading = false;
 
     [SerializeField] EventReference _menuMusic;
@@ -26,27 +28,33 @@ public class SceneLoader : MonoBehaviour
 
     #region Methods
 
-    private void Awake() {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+    //private void Awake() {
+    //    if (Instance == null)
+    //    {
+    //        Instance = this;
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //    else
+    //    {
+    //        Destroy(gameObject);
+    //    }
 
+        
+    //}
+
+    private void Start()
+    {
         _blackScreen.enabled = true;
+        StartCoroutine(FadeInScene());
     }
 
-    private void OnEnable() {
-        SceneManager.sceneLoaded += FadeInScene;
-    }
+    //private void OnEnable() {
+    //    SceneManager.sceneLoaded += FadeInScene;
+    //}
 
-    private void OnDisable() {
-        SceneManager.sceneLoaded -= FadeInScene;
-    }
+    //private void OnDisable() {
+    //    SceneManager.sceneLoaded -= FadeInScene;
+    //}
 
     public void LoadScene(SceneName sceneName) {
         if (!_isFading) {
@@ -77,17 +85,19 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    private void FadeInScene(Scene scene, LoadSceneMode mode) {
+    //private void FadeInScene(Scene scene, LoadSceneMode mode) {
+    private IEnumerator FadeInScene() {
         //parameters not needed
-        _blackScreen.DOFade(0, _fadeDuration);
+        yield return new WaitForSeconds(fadeInDelay);
+        _blackScreen.DOFade(0, _fadeInDuration);
     }
 
     private IEnumerator FadeOutScene(SceneName sceneName) {
         _isFading = true;
-        _blackScreen.DOFade(1, _fadeDuration);
-        yield return new WaitForSeconds(_fadeDuration);
+        _blackScreen.DOFade(1, _fadeOutDuration);
+        yield return new WaitForSeconds(_fadeOutDuration);
         _isFading = false;
-        SceneManager.LoadSceneAsync(sceneName.ToString());
+        SceneManager.LoadScene(sceneName.ToString());
     }
 
     #endregion

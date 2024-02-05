@@ -14,7 +14,7 @@ public class InteractableObject : MonoBehaviour, IPointerClickHandler
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        PlaySoundEffect();
+        
         JamEvents.TriggerInteractableObjectClicked(this);
     }
 
@@ -24,6 +24,6 @@ public class InteractableObject : MonoBehaviour, IPointerClickHandler
     }
 
     public virtual void TriggerObjectFeedback() {
-        //Implement in child class
+        PlaySoundEffect();
     }
 }

@@ -2178,6 +2178,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 579171649643624387, guid: 4c7acc842872cd34185dd1d4c0841169, type: 3}
+      propertyPath: _fadeOutDuration
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2141801629364364003, guid: 4c7acc842872cd34185dd1d4c0841169, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 98655928}
   - component: {fileID: 98655927}
   m_Layer: 5
-  m_Name: Button
+  m_Name: OverlayToActivateSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1210400395}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: StartSound
+        m_MethodName: StartAudioInitialization
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -897,6 +897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeType: 0
+  settingsCanvas: {fileID: 807300869}
 --- !u!114 &417394667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,7 +948,19 @@ MonoBehaviour:
   m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 417394666}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &476329733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeType: 1
+  settingsCanvas: {fileID: 807300869}
 --- !u!114 &767553321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,10 +1288,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 767553320}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &807300867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1364,6 +1390,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1982537427925537251, guid: 68735db9666db9f4d8de45d836310811, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136826846908175592, guid: 68735db9666db9f4d8de45d836310811, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3492625068824690553, guid: 68735db9666db9f4d8de45d836310811, type: 3}
@@ -1477,6 +1507,11 @@ PrefabInstance:
 --- !u!224 &807300868 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1982537427925537251, guid: 68735db9666db9f4d8de45d836310811, type: 3}
+  m_PrefabInstance: {fileID: 807300867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &807300869 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2136826846908175592, guid: 68735db9666db9f4d8de45d836310811, type: 3}
   m_PrefabInstance: {fileID: 807300867}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &955923657
@@ -1907,6 +1942,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 98655925}
     - target: {fileID: 6534782438387320887, guid: 4af3df746ad8dc949b20ae416c13daed, type: 3}
+      propertyPath: overlay
+      value: 
+      objectReference: {fileID: 98655925}
+    - target: {fileID: 6534782438387320887, guid: 4af3df746ad8dc949b20ae416c13daed, type: 3}
       propertyPath: _menuMusic.Path
       value: event:/MUSIC/Music_Menu_Music
       objectReference: {fileID: 0}
@@ -2139,8 +2178,16 @@ PrefabInstance:
       value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 579171649643624387, guid: 4c7acc842872cd34185dd1d4c0841169, type: 3}
+      propertyPath: fadeInDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 579171649643624387, guid: 4c7acc842872cd34185dd1d4c0841169, type: 3}
       propertyPath: Banks.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 579171649643624387, guid: 4c7acc842872cd34185dd1d4c0841169, type: 3}
+      propertyPath: _fadeOutDuration
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 579171649643624387, guid: 4c7acc842872cd34185dd1d4c0841169, type: 3}
       propertyPath: Banks.Array.data[0]
@@ -2574,6 +2621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeType: 2
+  settingsCanvas: {fileID: 807300869}
 --- !u!114 &1583388718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2624,7 +2672,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1583388717}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1646557833
 GameObject:
   m_ObjectHideFlags: 0
@@ -2877,6 +2937,10 @@ PrefabInstance:
     - target: {fileID: 3213969221504441383, guid: 8ff682d03dc04ad4d8aab8b1ede2fcf7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471936115208507761, guid: 8ff682d03dc04ad4d8aab8b1ede2fcf7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5080357919974474142, guid: 8ff682d03dc04ad4d8aab8b1ede2fcf7, type: 3}
       propertyPath: m_IsActive
