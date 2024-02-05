@@ -4,6 +4,7 @@ using FMODUnity;
 using FMOD.Studio;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class AudioManager : MonoBehaviour
 {
@@ -23,8 +24,8 @@ public class AudioManager : MonoBehaviour
     public float currentSFXVolume;
 
 
-    bool banksLoadedManually = false;
-    bool banksLoaded = false;
+    //bool banksLoadedManually = false;
+    //bool banksLoaded = false;
     public bool bussesInitialized = false;
 
     #endregion
@@ -44,35 +45,31 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        banksLoaded = FMODUnity.RuntimeManager.HaveAllBanksLoaded;
-        if (!banksLoaded)
-        {
-            LoadBanks();
-            Debug.Log($"loaded: {FMODUnity.RuntimeManager.HaveAllBanksLoaded}");
-        }
-        else if (!bussesInitialized)
-            SetBusses();
+    //private void Update()
+    //{
+    //    banksLoaded = FMODUnity.RuntimeManager.HaveAllBanksLoaded;
+    //    if (!banksLoaded)
+    //    {
+    //        LoadBanks();
+    //        Debug.Log($"loaded: {FMODUnity.RuntimeManager.HaveAllBanksLoaded}");
+    //    }
+    //    else if (!bussesInitialized)
+    //        SetBusses();
 
-        Debug.Log($"banksLoaded {banksLoaded}, manually {banksLoadedManually}, bussesInitialized {bussesInitialized}");
-    }
-    void LoadBanks()
+    //    //Debug.Log($"banksLoaded {banksLoaded}, manually {banksLoadedManually}, bussesInitialized {bussesInitialized}");
+    //}
+    public void LoadBanks()
     {
-
-        if (FMODUnity.RuntimeManager.HaveAllBanksLoaded && !banksLoadedManually)
+        if (!FMODUnity.RuntimeManager.HaveAllBanksLoaded)
         {
-            Debug.Log("~ Debug Bot says: Banks have loaded before manually loading");
-            SetBusses();
-            banksLoadedManually = true;
-        }
-        else
-        {
-            Debug.Log("~ Debug Bot says: Banks have not loaded yet");
             FMODUnity.RuntimeManager.LoadBank("Master.strings");
             FMODUnity.RuntimeManager.LoadBank("Master");
             FMODUnity.RuntimeManager.LoadBank("Music");
-            FMODUnity.RuntimeManager.LoadBank("SFX"); 
+            FMODUnity.RuntimeManager.LoadBank("SFX");
+        }
+        else
+        {
+            SetBusses();
         }
     }
 
@@ -80,8 +77,6 @@ public class AudioManager : MonoBehaviour
         _masterBus = RuntimeManager.GetBus("bus:/");
         _musicBus = RuntimeManager.GetBus("bus:/Music");
         _sfxBus = RuntimeManager.GetBus("bus:/SFX");
-        bussesInitialized = true;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void SetVolume(VolumeType type, float value) {
@@ -145,10 +140,10 @@ public class AudioManager : MonoBehaviour
      EventInstance eventInstance;
     public EventInstance CreateInstance(EventReference eventReference) {
        
-        if (bussesInitialized){
+        //if (bussesInitialized){
              eventInstance = RuntimeManager.CreateInstance(eventReference);
             _eventInstances.Add(eventInstance);
-        }
+        //}
         Debug.Log($"AudioManager created instance for eventReference {eventReference}");
         return eventInstance;
     }

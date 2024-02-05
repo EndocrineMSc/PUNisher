@@ -79,7 +79,8 @@ public class Dialogue : MonoBehaviour
         if (!debug && playerInRange)
             ShowDialogue(true);
 
-        if(!beaten) PlayerStopHandler.dialogueEngaged = dialogueBox.activeInHierarchy;
+        if (!beaten) PlayerStopHandler.dialogueEngaged = dialogueBox.activeInHierarchy;
+        else PlayerStopHandler.dialogueEngaged = true;
 
         if (PlayerStopHandler.dialogueEngaged && Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -87,14 +88,14 @@ public class Dialogue : MonoBehaviour
         }
 
         if (firstDojo && currentLine > defaultDialogue.Count) 
-            SceneLoader.Instance.LoadScene(nextScene);
-        if (beaten && currentLine > fightingDialogue.Count) 
-            SceneLoader.Instance.LoadScene(nextScene);
+            FindObjectOfType<SceneLoader>().LoadScene(nextScene);
+        if (beaten && currentLine > fightingDialogue.Count)
+            FindObjectOfType<SceneLoader>().LoadScene(nextScene);
 
     }
 
     public void ShowDialogue(bool show) {
-        currentLine = 0;
+        if(!beaten) currentLine = 0;
         playerInRange = false;
 
         dialogueBox.SetActive(show);
@@ -220,7 +221,6 @@ public class Dialogue : MonoBehaviour
         
         if(currentLine == fightingDialogue.Count) {
             dialogueBox.SetActive(false);
-            PlayerStopHandler.dialogueEngaged = false;
         } 
 
         currentLine++;
