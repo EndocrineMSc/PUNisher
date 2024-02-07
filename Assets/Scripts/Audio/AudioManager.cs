@@ -18,6 +18,9 @@ public class AudioManager : MonoBehaviour
     public Bus _masterBus;
     public Bus _musicBus;
     public Bus _sfxBus;
+    public FMOD.Studio.VCA master_VCA;
+    public FMOD.Studio.VCA music_VCA;
+    public FMOD.Studio.VCA SFX_VCA;
 
     public float currentMasterVolume;
     public float currentMusicVolume;
@@ -77,6 +80,9 @@ public class AudioManager : MonoBehaviour
         _masterBus = RuntimeManager.GetBus("bus:/");
         _musicBus = RuntimeManager.GetBus("bus:/Music");
         _sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        master_VCA = FMODUnity.RuntimeManager.GetVCA("vca:/Main");
+        music_VCA = FMODUnity.RuntimeManager.GetVCA("vca:/Music");
+        SFX_VCA = FMODUnity.RuntimeManager.GetVCA("vca:/SFX");
     }
 
     public void SetVolume(VolumeType type, float value) {
@@ -87,15 +93,18 @@ public class AudioManager : MonoBehaviour
          
         switch (type) {
             case VolumeType.MASTER:
-                _masterBus.setVolume(value);
+                //_masterBus.setVolume(value);
+                master_VCA.setVolume(value);
                 currentMasterVolume = value;
                 break;
             case VolumeType.MUSIC:
-                _musicBus.setVolume(value);
+                //_musicBus.setVolume(value);
+                music_VCA.setVolume(value);
                 currentMusicVolume = value;
                 break;
             case VolumeType.SFX:
-                _sfxBus.setVolume(value);
+                //_sfxBus.setVolume(value);
+                SFX_VCA.setVolume(value);
                 currentSFXVolume = value;
                 break;
             default: 
@@ -107,13 +116,16 @@ public class AudioManager : MonoBehaviour
     public float GetVolume(VolumeType type) {
         switch (type) {
             case VolumeType.MASTER:
-                _masterBus.getVolume(out float masterVolume);
+                //_masterBus.getVolume(out float masterVolume);
+                master_VCA.getVolume(out float masterVolume);
                 return masterVolume;
             case VolumeType.MUSIC:
-                _musicBus.getVolume(out float musicVolume);
+                //_musicBus.getVolume(out float musicVolume);
+                music_VCA.getVolume(out float musicVolume);
                 return musicVolume;
             case VolumeType.SFX:
-                _sfxBus.getVolume(out float sfxVolume);
+                //_sfxBus.getVolume(out float sfxVolume);
+                SFX_VCA.getVolume(out float sfxVolume);
                 return sfxVolume;
             default: 
                 Debug.LogError("Volume Type is not known!");

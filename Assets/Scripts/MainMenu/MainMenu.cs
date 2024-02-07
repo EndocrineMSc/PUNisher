@@ -66,6 +66,7 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
+        
         if (audioInitStarted)
         {
 
@@ -76,9 +77,13 @@ public class MainMenu : MonoBehaviour
             }
             else
             {
-                if(!audioResumed)
+                if (!audioResumed)
                     ResumeAudio();
-            }           
+            }
+        }
+        else {
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) 
+                StartAudioInitialization();
         }   
 
     }
