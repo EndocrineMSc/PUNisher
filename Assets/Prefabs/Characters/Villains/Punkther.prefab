@@ -451,7 +451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.153, y: 45.2793}
+  m_AnchoredPosition: {x: 61.153, y: 37}
   m_SizeDelta: {x: 722.45, y: 42.6284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7536291403718730332
@@ -490,7 +490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 345, y: -8.289}
+  m_AnchoredPosition: {x: 345, y: -5}
   m_SizeDelta: {x: 600.144, y: 94.086}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7822080441857514630
@@ -523,7 +523,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Villain Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ac7366e35e66b9345ab9a501131f8d7c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -548,8 +548,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_margin: {x: 2.3974915, y: 0, z: 0.7873841, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7856377339385636980
@@ -783,8 +783,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ac7366e35e66b9345ab9a501131f8d7c, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 6751232286839904945, guid: ac7366e35e66b9345ab9a501131f8d7c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -808,8 +808,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -902,6 +902,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 7856377339385636980}
   nameTag: {fileID: 4835300200979773105}
   dialogueText: {fileID: 1038258515214740943}
+  currentLine: 0
   defaultDialogue:
   - name: Young PUNdawan
     text: I will PUNish you! PUNch PUNch!
@@ -976,7 +977,6 @@ MonoBehaviour:
       pun.'
     image: {fileID: 8545733822813823363}
     moodSprite: {fileID: 21300000, guid: 5ba5d49633c795c4e9f6ac18fbf8de98, type: 3}
-  currentLine: 0
 --- !u!1 &8545733822813823363
 GameObject:
   m_ObjectHideFlags: 0

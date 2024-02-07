@@ -869,7 +869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_enableWordWrapping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_hasFontAssetChanged
