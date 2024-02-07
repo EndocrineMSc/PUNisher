@@ -70,7 +70,7 @@ public class MainMenu : MonoBehaviour
         if (audioInitStarted)
         {
 
-            Debug.Log("Banks loaded: " + FMODUnity.RuntimeManager.HaveAllBanksLoaded);
+            //Debug.Log("Banks loaded: " + FMODUnity.RuntimeManager.HaveAllBanksLoaded);
             if (!FMODUnity.RuntimeManager.HaveAllBanksLoaded)
             {
                 AudioManager.Instance.LoadBanks();
