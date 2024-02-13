@@ -896,6 +896,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
+  names:
+  - Young PUNdawan
+  - Labrador
+  nameColors:
+  - {r: 1, g: 0.33333334, b: 0, a: 1}
+  - {r: 1, g: 0.77108335, b: 0, a: 1}
   fighting: 0
   beaten: 0
   nextScene: 3
@@ -904,7 +910,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1038258515214740943}
   currentLine: 0
   defaultDialogue:
-  - name: Young Pundawan
+  - name: Young PUNdawan
     text: I will make you wag your tail!
     image: {fileID: 8545733822813823363}
     moodSprite: {fileID: 0}
@@ -917,7 +923,7 @@ MonoBehaviour:
     text: ...
     image: {fileID: 2382334520007717300}
     moodSprite: {fileID: 0}
-  - name: Young Pundawan
+  - name: Young PUNdawan
     text: Why did the dog cross the road? To get to the barking lot!
     image: {fileID: 8545733822813823363}
     moodSprite: {fileID: 0}
@@ -925,7 +931,7 @@ MonoBehaviour:
     text: That one was RUFF.
     image: {fileID: 2382334520007717300}
     moodSprite: {fileID: 0}
-  - name: Young Pundawan
+  - name: Young PUNdawan
     text: What is a dog dentist's favorite tooth? The canine.
     image: {fileID: 8545733822813823363}
     moodSprite: {fileID: 0}
@@ -933,7 +939,7 @@ MonoBehaviour:
     text: Chew, hehe.
     image: {fileID: 2382334520007717300}
     moodSprite: {fileID: 0}
-  - name: Young Pundawan
+  - name: Young PUNdawan
     text: What do you call a large dog that meditates? Aware wolf.
     image: {fileID: 8545733822813823363}
     moodSprite: {fileID: 0}
@@ -942,7 +948,7 @@ MonoBehaviour:
 
       Okay, go bark at the next tree!'
     image: {fileID: 2382334520007717300}
-    moodSprite: {fileID: 0}
+    moodSprite: {fileID: 21300000, guid: ba358d2451bb86d47b8ba9f4ac8446c8, type: 3}
 --- !u!1 &8545733822813823363
 GameObject:
   m_ObjectHideFlags: 0

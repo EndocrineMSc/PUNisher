@@ -31,6 +31,8 @@ public class Dialogue : MonoBehaviour
     int punsCollected = 0;
     bool playerInRange = false;
     bool firstDojo;
+    [SerializeField] List<string> names;
+    [SerializeField] List<Color> nameColors;
 
     public bool fighting = false;
     public bool beaten = false;
@@ -44,12 +46,13 @@ public class Dialogue : MonoBehaviour
     [SerializeField] List<Sentence> defaultDialogue;
     [SerializeField] List<Sentence> fightingDialogue;
 
-   
 
-   #endregion
+    
 
-   #region Methods
-  
+    #endregion
+
+    #region Methods
+
     void OnTriggerEnter2D(Collider2D other)
     {
         playerInRange = true;
@@ -91,7 +94,15 @@ public class Dialogue : MonoBehaviour
             FindObjectOfType<SceneLoader>().LoadScene(nextScene);
         if (beaten && currentLine > fightingDialogue.Count)
             FindObjectOfType<SceneLoader>().LoadScene(nextScene);
+    }
 
+    void ChangeNameColor()
+    {
+        for (int i = 0; i < names.Count; i++)
+        {
+            if (nameTag.text.Equals(names[i]))
+                nameTag.color = nameColors[i];
+        }
     }
 
     public void ShowDialogue(bool show) {
@@ -115,7 +126,7 @@ public class Dialogue : MonoBehaviour
     }
 
     GameObject currentImage;
-    private void AdvanceDefaultDialogue() 
+    private void AdvanceDefaultDialogue()
     {
         if (currentLine <= defaultDialogue.Count - 1)
         {
@@ -141,15 +152,16 @@ public class Dialogue : MonoBehaviour
 
             dialogueText.text = currentSentence.text;
             nameTag.text = currentSentence.name;
+            ChangeNameColor();
         }
         //else if (currentLine == defaultDialogue.Count - 1) { 
         //    //if(!firstDojo && punsCollected == punsNeeded)  
         //    //{
-                
+
 
         //    //    return;
         //    //}
-            
+
         //}
         else if (currentLine == defaultDialogue.Count)
         {
@@ -213,6 +225,7 @@ public class Dialogue : MonoBehaviour
                 currentImage.GetComponent<Image>().sprite = currentSentence.moodSprite;
             }
             nameTag.text = currentSentence.name;
+            ChangeNameColor();
         }
         
         if (currentLine == fightingDialogue.Count - 1) {

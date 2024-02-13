@@ -896,6 +896,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
+  names:
+  - Young PUNdawan
+  - Orca
+  nameColors:
+  - {r: 1, g: 0.33333334, b: 0, a: 1}
+  - {r: 0, g: 0.7372549, b: 1, a: 1}
   fighting: 0
   beaten: 0
   nextScene: 4
@@ -938,9 +944,9 @@ MonoBehaviour:
     image: {fileID: 8545733822813823363}
     moodSprite: {fileID: 0}
   - name: Orca
-    text: "*caugh* \nThis one was good!"
+    text: "*caugh* \nChildish, but good!"
     image: {fileID: 2382334520007717300}
-    moodSprite: {fileID: 0}
+    moodSprite: {fileID: 21300000, guid: 528531750521fcd48a518453753ed04c, type: 3}
   - name: Young PUNdawan
     text: What do you call a group of whales playing instruments? An orca-stra.
     image: {fileID: 8545733822813823363}
@@ -950,7 +956,7 @@ MonoBehaviour:
 
       Very well, I will flush you to the next dojo!'
     image: {fileID: 2382334520007717300}
-    moodSprite: {fileID: 0}
+    moodSprite: {fileID: 21300000, guid: 528531750521fcd48a518453753ed04c, type: 3}
 --- !u!1 &8545733822813823363
 GameObject:
   m_ObjectHideFlags: 0

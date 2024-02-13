@@ -865,7 +865,7 @@ PrefabInstance:
       objectReference: {fileID: 5715898849919025054, guid: f39b89bc7dafc1b40af38c0bf66a129f, type: 2}
     - target: {fileID: 1038258515214740943, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_characterSpacing
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_enableWordWrapping
@@ -909,6 +909,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7856377339385636980, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
+      propertyPath: nameColors.Array.data[1].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
+      propertyPath: nameColors.Array.data[1].g
+      value: 0.7391243
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}
+      propertyPath: nameColors.Array.data[1].r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8244827681299750580, guid: 40a848edad2df5049a4b6bebe6ad14ff, type: 3}

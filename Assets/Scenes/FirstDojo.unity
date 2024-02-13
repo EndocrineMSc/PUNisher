@@ -598,6 +598,50 @@ PrefabInstance:
       propertyPath: debug
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: names.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: names.Array.data[0]
+      value: Master PUNda
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: names.Array.data[1]
+      value: PUNkther
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: names.Array.data[2]
+      value: Young PUNdawan
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: nameColors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: nameColors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: nameColors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: nameColors.Array.data[1].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: nameColors.Array.data[1].g
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: nameColors.Array.data[1].r
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244827681299750580, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
+      propertyPath: nameColors.Array.data[2].a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8260442746902416531, guid: 41bd7b88813a46a4ba3b8e54f757e9ff, type: 3}
       propertyPath: m_Name
       value: MasterPunda

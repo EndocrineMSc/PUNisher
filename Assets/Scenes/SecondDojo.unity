@@ -1034,7 +1034,7 @@ PrefabInstance:
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 1038258515214740943, guid: 210e30afd722e4f45a0b628920ed6b24, type: 3}
       propertyPath: m_characterSpacing
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1038258515214740943, guid: 210e30afd722e4f45a0b628920ed6b24, type: 3}
       propertyPath: m_VerticalAlignment

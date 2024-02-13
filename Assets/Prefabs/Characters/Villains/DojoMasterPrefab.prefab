@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 217.51999, y: 10.889011}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 190, y: 10}
+  m_SizeDelta: {x: 140, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &589487348703140226
 CanvasRenderer:
@@ -163,11 +163,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8479828816166809701}
+  m_Father: {fileID: 3767675164868063944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -101.37503, y: 146.11499}
+  m_AnchoredPosition: {x: -115, y: -35.88521}
   m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &892942601896910053
@@ -239,8 +239,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 80442176689403123}
-  - {fileID: 1290120705180476097}
-  - {fileID: 6984485228557915809}
   m_Father: {fileID: 3767675164868063944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -394,7 +392,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -453,7 +451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.153, y: 45.2793}
+  m_AnchoredPosition: {x: 61.153, y: 37}
   m_SizeDelta: {x: 722.45, y: 42.6284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7536291403718730332
@@ -492,7 +490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 325.257, y: -8.289}
+  m_AnchoredPosition: {x: 345, y: -5}
   m_SizeDelta: {x: 600.144, y: 94.086}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7822080441857514630
@@ -566,7 +564,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -624,6 +622,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6984485228557915809}
+  - {fileID: 1290120705180476097}
   - {fileID: 8479828816166809701}
   m_Father: {fileID: 3476789250488595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -895,12 +895,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba05e54b4de8ae4b9ecb1946cab4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  punsNeeded: 0
+  debug: 0
   fighting: 0
   beaten: 0
+  nextScene: 0
   dialogueBox: {fileID: 7856377339385636980}
   nameTag: {fileID: 4835300200979773105}
   dialogueText: {fileID: 1038258515214740943}
+  currentLine: 0
   defaultDialogue:
   - name: A
     text: I am a hero!
@@ -953,11 +955,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8479828816166809701}
+  m_Father: {fileID: 3767675164868063944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 101.374985, y: 146.11499}
+  m_AnchoredPosition: {x: 114.99998, y: -35.88521}
   m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6759857281832549112
